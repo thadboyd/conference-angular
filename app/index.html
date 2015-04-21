@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/app.css" />
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/vendor/modernizr.js"></script>
 </head>
@@ -22,7 +23,7 @@
 </section><!-- icons -->
 
 <div ng-controller="CreditCtrl">
-  <footer>
+  <footer id="main-footer">
     <p>Original content and site code &copy; 2015 Thaddeus Boyd</p>
     
     <div>Additional credits and copyrights:
@@ -35,8 +36,7 @@
 
   <section ng-repeat="credit_category in credits" id="{{credit_category.id}}" data-reveal>
     <h2>{{credit_category.name}}</h2>
-    
-    <p ng-repeat="credit in credit_category.credits">{{credit}}</p>
+    <p ng-repeat="credit in credit_category.credits" ng-bind-html="credit"></p>
   </section>
 </div><!-- creditctrl -->
 
