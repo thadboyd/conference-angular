@@ -2,16 +2,26 @@
 
 /* Controllers */
 
-var conferenceApp = angular.module('conferenceApp', []);
+var conferenceControllers = angular.module('conferenceControllers', []);
 
-conferenceApp.controller('CategoryCtrl', ['$scope', '$http', function($scope, $http) {
+conferenceControllers.controller('CategoryCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('data/categories.json').success(function(data) {
     $scope.categories = data;
   });
 }]);
 
-conferenceApp.controller('CreditCtrl', ['$scope', '$http', function($scope, $http) {
+conferenceControllers.controller('CreditCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('data/credits.json').success(function(data) {
     $scope.credits = data;
   });
 }]);
+
+conferenceControllers.controller('CreditPartialCtrl', ['$scope', '$routeParams',
+  function($scope, $routeParams) {
+    $scope.creditFile = $routeParams.id;
+  }]);
+
+conferenceControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
+  function($scope, $routeParams) {
+    $scope.phoneId = $routeParams.phoneId;
+  }]);
