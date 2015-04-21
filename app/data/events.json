@@ -1,0 +1,47 @@
+{
+  "breakfast": {
+    "icon": "fa-coffee"
+  },
+  "lunch": {
+    "icon": "fa-cutlery"
+  },
+  "registration": {
+    "icon": "fa-pencil"
+  },
+  "newman": {
+    "name": "George Newman",
+    "image": "img/stock-portrait4.jpg"
+  },
+  "campbell": {
+    "name": "Teri Campbell",
+    "image": "img/stock-spontaneous.jpg"
+  },
+  "fletcher": {
+    "name": "RJ Fletcher",
+    "image": "img/stock-kenny-london.jpg"
+  },
+  "ebilchik": {
+    "name": "Esther Bilchik",
+    "image": "img/stock-futuristic-glasses.jpg"
+  },
+  "steckler": {
+    "name": "Bob Steckler",
+    "image": "img/stock-guy1.jpg"
+  },
+  "finklestein": {
+    "name": "Pamela Finklestein",
+    "image": "img/stock-smiling-so-happy.jpg"
+  },
+  "macintosh": {
+    "name": "Noodles MacIntosh",
+    "image": "img/stock-tomasito-superstar.jpg"
+  },
+  "earley": {
+    "name": "Joe Earley",
+    "image": "img/stock-rural-self-portrait.jpg"
+  },
+  "spadowski": {
+    "name": "Stanley Spadowski",
+    "image": "img/stock-coffee-smile.jpg"
+  }
+}
