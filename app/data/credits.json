@@ -2,18 +2,60 @@
   {
     "name": "Stock Images",
     "id": "stock_images",
-    "credits_html": "partials/credits/stock_images.html"
+    "credits": [
+      "<a href=\"http://www.freeimages.com/photo/1152047\">Glossy Ball 1</a> by <a href=\"http://www.freeimages.com/profile/barunpatro\">Barun Patro</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1326374\">Simple Swirls 1</a> by <a href=\"http://www.freeimages.com/profile/k_vohsen\">Kimberly Vohsen</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/746718\">Stock Portrait 4</a> by <a href=\"http://www.freeimages.com/profile/makram\">Malik Bhai</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1141475\">Spontaneous</a> by <a href=\"http://www.freeimages.com/profile/bjearwicke\">Benjamin Earwicker</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/442249\">Kenny in London 30</a> by <a href=\"http://www.freeimages.com/profile/matchstick\">Martin Walls</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1418622\">Futuristic Glasses</a> by <a href=\"http://www.freeimages.com/profile/l4red0\">Leszek Soltys</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1167030\">Guy 1</a> by <a href=\"http://www.freeimages.com/profile/keenanm\">Keenan Milligan</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1168191\">Smiling So Happy</a> by <a href=\"http://www.freeimages.com/profile/jvangalen\">Jos van Galen</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1166915\">Tomasito Superstar</a> by <a href=\"http://www.freeimages.com/profile/coloniera2\">Hector Landaeta</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1363173\">Rural Self Portrait</a> by <a href=\"http://www.freeimages.com/profile/colinbroug\">Colin Brough</a>",
+      
+      "<a href=\"http://www.freeimages.com/photo/1287009\">Coffee Smile</a> by <a href=\"http://www.freeimages.com/profile/michaelaw\">Michaela Kobyakov</a>",
+      
+      "Striped background created with <a href=\"http://www.stripegenerator.com/\">Stripe Generator</a>"
+    ]
   },{
     "name": "Fonts",
     "id": "fonts",
-    "credits_html": "partials/credits/fonts.html"
+    "credits": [
+      "<a href=\"http://www.google.com/fonts/specimen/Open+Sans\">Open Sans</a> designed by <a href=\"https://profiles.google.com/107777320916704234605/about\">Steve Matteson</a>, &copy; 2010-2011 Google Corporation",
+      
+      "<a href=\"http://www.google.com/fonts/specimen/Montserrat\">Montserrat</a> &copy; 2012 Julieta Ulanovsky",
+      
+      "Dosis &copy; <a href=\"https://plus.google.com/114391601624281927771/about\">Pablo Impallari</a>",
+      
+      "Nunito &copy; <a href=\"https://plus.google.com/+vernonadams/about\">Vernon Adams</a>",
+      
+      "<a href=\"http://fontawesome.io\">Font Awesome</a> &copy; 2012-2015 Dave Gandy"
+    ]
   },{
     "name": "Libraries",
     "id": "libraries",
-    "credits_html": "partials/credits/libraries.html"
+    "credits": [
+      "<a href=\"http://foundation.zurb.com/\">Foundation</a> &copy; 2014 Zurb",
+      
+      "<a href=\"http://jquery.com/\">jQuery</a> &copy; 2005, 2014 jQuery Foundation",
+      
+      "<a href=\"https://ftlabs.github.io/fastclick/\">FastClick</a> &copy; 2014 The Financial Times Limited"
+    ]
   },{
     "name": "Song Lyrics",
     "id": "song_lyrics",
-    "credits_html": "partials/credits/song_lyrics.html"
+    "credits": [
+      "<p><a href=\"https://www.youtube.com/watch?v=GyV_UG60dD4\"><cite>Mission Statement</cite></a> lyrics &copy; 2014 \"Weird Al\" Yankovic</p>"
+    ]
   }
 ]

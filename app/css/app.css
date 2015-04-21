@@ -288,7 +288,7 @@ li.back h5 {
 
 
 /* FOOTER */
-#main-footer {
+body > footer {
   background-color: white;
   margin-top: 1rem;
   border-top: solid 1px #ced0d2;
