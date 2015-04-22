@@ -1,5 +1,6 @@
-{
-  "03-31": {
+[
+  {
+    "id": "03-31",
     "header": "Tuesday, March 31, 2015",
     "schedule": [
       {
@@ -56,8 +57,8 @@
 	"desc": "Lunch"
       }
     ]
-  },
-  "04-01": {
+  },{
+    "id": "04-01",
     "header": "Wednesday, April 1, 2015",
     "schedule": [
       {
@@ -88,8 +89,8 @@
 	"category": "ideas"
       }
     ]
-  },
-  "04-02": {
+  },{
+    "id": "04-02",
     "header": "Thursday, April 2, 2015",
     "schedule": [
       {
@@ -121,4 +122,4 @@
       }
     ]
   }
-}
+]
