@@ -35,16 +35,17 @@
 	  <div class="event-icon fa {{events[agenda_item.event].icon}}"></div>
 	</div>
 	<div ng-if="agenda_item.category" class="category fa {{categories[agenda_item.category]}}"></div>
-	</div>
 	<p class="time">{{agenda_item.time}}</p>
       </div>
       <div class="desc">
 	<p class="location">{{agenda_item.location}}</p>
 	<h3>{{agenda_item.desc}}</h3>
-	<a class="viewmore" href="javascript:void(0)" data-reveal-id="stock_images">
-	  <p ng-if="events[agenda_item.event].name">with <strong>{{events[agenda_item.event].name}}</strong></p>
-	  <span class="fa fa-info-circle"></span>
-	</a>
+	<footer>
+	  <a class="viewmore" href="javascript:void(0)" data-reveal-id="stock_images">
+	    <span class="fa fa-info-circle"></span>
+	    <p ng-if="events[agenda_item.event].name">with <strong>{{events[agenda_item.event].name}}</strong></p>
+	  </a>
+	</footer>
       </div><!-- desc -->
     </li>
   </ul>
