@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var conferenceApp = angular.module('conferenceApp', ['ngSanitize']);
+var conferenceApp = angular.module('conferenceApp', ['ngSanitize', 'mm.foundation']);
 
 conferenceApp.controller('AgendaCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('data/categories.json').success(function(data) {
@@ -10,6 +10,9 @@ conferenceApp.controller('AgendaCtrl', ['$scope', '$http', function($scope, $htt
   });
   $http.get('data/days.json').success(function(data) {
     $scope.days = data;
+  });
+  $http.get('data/events.json').success(function(data) {
+    $scope.events = data;
   });
 }]);
 

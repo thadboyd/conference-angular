@@ -1,6 +1,6 @@
 [
   {
-    "name": "Stock Images",
+    "name": "stock images",
     "id": "stock_images",
     "credits": [
       "<a href=\"http://www.freeimages.com/photo/1152047\">Glossy Ball 1</a> by <a href=\"http://www.freeimages.com/profile/barunpatro\">Barun Patro</a>",
@@ -28,7 +28,7 @@
       "Striped background created with <a href=\"http://www.stripegenerator.com/\">Stripe Generator</a>"
     ]
   },{
-    "name": "Fonts",
+    "name": "fonts",
     "id": "fonts",
     "credits": [
       "<a href=\"http://www.google.com/fonts/specimen/Open+Sans\">Open Sans</a> designed by <a href=\"https://profiles.google.com/107777320916704234605/about\">Steve Matteson</a>, &copy; 2010-2011 Google Corporation",
@@ -42,17 +42,19 @@
       "<a href=\"http://fontawesome.io\">Font Awesome</a> &copy; 2012-2015 Dave Gandy"
     ]
   },{
-    "name": "Libraries",
+    "name": "libraries",
     "id": "libraries",
     "credits": [
-      "<a href=\"http://foundation.zurb.com/\">Foundation</a> &copy; 2014 Zurb",
+      "<a href=\"http://foundation.zurb.com/\">Foundation</a> &copy; 2014 ZURB",
       
       "<a href=\"http://jquery.com/\">jQuery</a> &copy; 2005, 2014 jQuery Foundation",
+      
+      "<a href=\"https://angularjs.org/\">AngularJS</a> &copy; 2010-2015 Google, Inc.",
       
       "<a href=\"https://ftlabs.github.io/fastclick/\">FastClick</a> &copy; 2014 The Financial Times Limited"
     ]
   },{
-    "name": "Song Lyrics",
+    "name": "song lyrics",
     "id": "song_lyrics",
     "credits": [
       "<p><a href=\"https://www.youtube.com/watch?v=GyV_UG60dD4\"><cite>Mission Statement</cite></a> lyrics &copy; 2014 \"Weird Al\" Yankovic</p>"

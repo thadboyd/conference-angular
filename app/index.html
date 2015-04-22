@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/app.css" />
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-foundation/mm-foundation.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/vendor/modernizr.js"></script>
 </head>
@@ -28,13 +29,22 @@
   <ul class="small-block-grid-2 large-block-grid-4">
     <li ng-repeat="agenda_item in day.schedule" class="agenda-item {{agenda_item.category}}">
       <div>
-      <p class="time">{{agenda_item.time}}</p>
+	<img ng-if="events[agenda_item.event].image" src="{{events[agenda_item.event].image}}" alt="{{events[agenda_item.event].name}}" />
+	<div ng-if="!events[agenda_item.event].image">
+	  <img src="img/stripes.png" alt="stripes" />
+	  <div class="event-icon fa {{events[agenda_item.event].icon}}"></div>
+	</div>
+	<div ng-if="agenda_item.category" class="category fa {{categories[0].icon}}"></div>
+	</div>
+	<p class="time">{{agenda_item.time}}</p>
       </div>
       <div class="desc">
-	<h3>{{agenda_item.desc}}</h3>
 	<p class="location">{{agenda_item.location}}</p>
-	
-	<a class="viewmore" href="javascript:void(0)" data-reveal-id="stock_images"><span class="fa fa-info-circle"></span></a>
+	<h3>{{agenda_item.desc}}</h3>
+	<a class="viewmore" href="javascript:void(0)" data-reveal-id="stock_images">
+	  <p ng-if="events[agenda_item.event].name">with <strong>{{events[agenda_item.event].name}}</strong></p>
+	  <span class="fa fa-info-circle"></span>
+	</a>
       </div><!-- desc -->
     </li>
   </ul>
@@ -58,7 +68,8 @@
   </section>
 </div><!-- creditctrl -->
 
-<script src="bower_components/jquery/src/jquery.js"></script>
+<!-- script src="bower_components/jquery/src/jquery.js"></script -->
+<script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/fastclick.js"></script>
 <script src="js/foundation/foundation.js"></script>
 <script src="js/foundation/foundation.topbar.js"></script>
