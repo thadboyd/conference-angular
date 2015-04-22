@@ -1,34 +1,10 @@
-[
-  {
-    "name": "keynote",
-    "icon": "fa-microphone"
-  },
-  {
-    "name": "ideas",
-    "icon": "fa-lightbulb-o"
-  },
-  {
-    "name": "lesson",
-    "icon": "fa-graduation-cap"
-  },
-  {
-    "name": "chart",
-    "icon": "fa-line-chart"
-  },
-  {
-    "name": "lifecycle",
-    "icon": "fa-heart"
-  },
-  {
-    "name": "development",
-    "icon": "fa-code"
-  },
-  {
-    "name": "talk",
-    "icon": "fa-comments"
-  },
-  {
-    "name": "bonus",
-    "icon": "fa-diamond"
-  }
-]
+{
+  "keynote": "fa-microphone",
+  "ideas": "fa-lightbulb-o",
+  "lesson": "fa-graduation-cap",
+  "chart": "fa-line-chart",
+  "lifecycle": "fa-heart",
+  "development": "fa-code",
+  "talk": "fa-comments",
+  "bonus": "fa-diamond"
+}

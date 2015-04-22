@@ -17,8 +17,8 @@
 <section class="row icons">
   <h2>Categories:</h2>
   <div class="icon-bar eight-up">
-    <div ng-repeat="category in categories" class="item">
-      <a class="inactive" data-category="{{category.name}}" href="javascript:void(0)"><span class="category fa {{category.icon}}"></span></a>
+    <div ng-repeat="(name, icon) in categories" class="item">
+      <a class="inactive" data-category="{{name}}" href="javascript:void(0)"><span class="category fa {{icon}}"></span></a>
     </div>
   </div><!-- icon-bar -->
 </section><!-- icons -->
@@ -34,7 +34,7 @@
 	  <img src="img/stripes.png" alt="stripes" />
 	  <div class="event-icon fa {{events[agenda_item.event].icon}}"></div>
 	</div>
-	<div ng-if="agenda_item.category" class="category fa {{categories[0].icon}}"></div>
+	<div ng-if="agenda_item.category" class="category fa {{categories[agenda_item.category]}}"></div>
 	</div>
 	<p class="time">{{agenda_item.time}}</p>
       </div>
