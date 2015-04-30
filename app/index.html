@@ -7,49 +7,16 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/app.css" />
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-foundation/mm-foundation.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/vendor/modernizr.js"></script>
 </head>
-<body ng-controller="AgendaCtrl">
+<body>
 
-<section class="row icons">
-  <h2>Categories:</h2>
-  <div class="icon-bar eight-up">
-    <div ng-repeat="(name, icon) in categories" class="item">
-      <a class="inactive" data-category="{{name}}" href="javascript:void(0)"><span class="category fa {{icon}}"></span></a>
-    </div>
-  </div><!-- icon-bar -->
-</section><!-- icons -->
-
-<section ng-repeat="day in days" id="{{day.id}}" class="row">
-  <h2>{{day.header}}</h2>
-  
-  <ul class="small-block-grid-2 large-block-grid-4">
-    <li ng-repeat="agenda_item in day.schedule" class="agenda-item {{agenda_item.category}}">
-      <div>
-	<img ng-if="events[agenda_item.event].image" src="{{events[agenda_item.event].image}}" alt="{{events[agenda_item.event].name}}" />
-	<div ng-if="!events[agenda_item.event].image">
-	  <img src="img/stripes.png" alt="stripes" />
-	  <div class="event-icon fa {{events[agenda_item.event].icon}}"></div>
-	</div>
-	<div ng-if="agenda_item.category" class="category fa {{categories[agenda_item.category]}}"></div>
-	<p class="time">{{agenda_item.time}}</p>
-      </div>
-      <div class="desc">
-	<p class="location">{{agenda_item.location}}</p>
-	<h3>{{agenda_item.desc}}</h3>
-	<footer>
-	  <a class="viewmore" href="javascript:void(0)" data-reveal-id="stock_images">
-	    <span class="fa fa-info-circle"></span>
-	    <p ng-if="events[agenda_item.event].name">with <strong>{{events[agenda_item.event].name}}</strong></p>
-	  </a>
-	</footer>
-      </div><!-- desc -->
-    </li>
-  </ul>
-</section>
+<div ng-view></div>
 
 <div ng-controller="CreditCtrl">
   <footer id="main-footer">
