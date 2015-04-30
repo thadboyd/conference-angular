@@ -17,6 +17,13 @@ conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http',
     });
   }]);
 
+conferenceControllers.controller('SponsorsCtrl', ['$scope', '$http',
+  function($scope, $http) {
+    $http.get('data/sponsors.json').success(function(data) {
+      $scope.sponsors = data;
+    });
+  }]);
+
 conferenceControllers.controller('CreditCtrl', ['$scope', '$http',
   function($scope, $http) {
     $http.get('data/credits.json').success(function(data) {
