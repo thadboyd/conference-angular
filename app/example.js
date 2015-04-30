@@ -41,3 +41,10 @@ angular.module('foundationDemoApp').controller('ModalInstanceCtrl', function ($s
     $modalInstance.dismiss('cancel');
   };
 });
+
+angular.module('foundationDemoApp').controller('TopBarDemoCtrl', ['$scope', '$http',
+  function($scope, $http) {
+    $http.get('data/topnav.json').success(function(data) {
+      $scope.topnav = data;
+    });
+  }]);

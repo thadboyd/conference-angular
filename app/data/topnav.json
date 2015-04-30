@@ -4,31 +4,28 @@
     "link": "http://thadde.us/websites.php#conference"
   },{
     "name": "About",
-    "link": "javascript:void(0)",
-    "data-reveal-id": "about"
+    "link": "#/about"
   },{
     "name": "Schedule",
-    "link":"index.html",
+    "link":"#/schedule",
     "children": [
       {
 	"name": "March 31",
-	"link": "index.html#03-31"
+	"link": "#/schedule/#03-31"
       },{
 	"name": "April 1",
-	"link": "index.html#04-01"
+	"link": "#/schedule/#04-01"
       },{
 	"name": "April 2",
-	"link": "index.html#04-02"
+	"link": "#/schedule/#04-02"
       }
     ]
   },{
     "name": "Sponsors",
-    "link": "javascript:void(0)",
-    "data-reveal-id": "sponsors"
+    "link": "#/sponsors"
   },{
     "name": "Register",
-    "href": "javascript:void(0)",
-    "data-reveal-id": "register",
+    "href": "#/register",
     "class": "highlight"
   }
 ]
