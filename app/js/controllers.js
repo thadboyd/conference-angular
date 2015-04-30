@@ -4,6 +4,13 @@
 
 var conferenceControllers = angular.module('conferenceControllers', ['ngSanitize', 'mm.foundation']);
 
+conferenceControllers.controller('TopBarCtrl', ['$scope', '$http',
+  function($scope, $http) {
+    $http.get('data/topnav.json').success(function(data) {
+      $scope.topnav = data;
+    });
+  }]);
+
 conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http',
   function($scope, $http) {
     $http.get('data/categories.json').success(function(data) {
