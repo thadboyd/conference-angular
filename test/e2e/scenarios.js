@@ -12,14 +12,17 @@ describe('Conference App', function() {
   });
   
   describe('sponsor view', function() {
+    var sponsor_lists;
+    
     beforeEach(function() {
       browser.get('app/index.html#/sponsors');
+      sponsor_lists = element.all(by.repeater('(level, sponsor_list) in sponsors'));
     });
     
     it('should display 3 levels of sponsorship', function() {
-	var sponsor_lists = element.all(by.repeater('(level, sponsor_list) in sponsors'));
 	expect(sponsor_lists.count()).toBe(3);
     });
+    
   });
   
 });

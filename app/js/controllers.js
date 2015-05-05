@@ -4,11 +4,14 @@
 
 var conferenceControllers = angular.module('conferenceControllers', ['ngSanitize', 'mm.foundation']);
 
-conferenceControllers.controller('TopBarCtrl', ['$scope', '$http',
-  function($scope, $http) {
+conferenceControllers.controller('TopBarCtrl', ['$scope', '$http', '$location',
+  function($scope, $http, $location) {
     $http.get('data/topnav.json').success(function(data) {
       $scope.topnav = data;
     });
+    $scope.isActive = function(viewLocation) {
+      return viewLocation === $location.path();
+    };
   }]);
 
 conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http',
