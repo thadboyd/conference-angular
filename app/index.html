@@ -46,10 +46,20 @@
     
     <div>Additional credits and copyrights:
       <ul id="creditnav">
-	<li ng-repeat="credit_category in credits"><a href="javascript:void(0)" data-reveal-id="{{credit_category.id}}">{{credit_category.name}}</a></li>
+	<li ng-repeat="credit_category in credits"><a href="javascript:void(0)" ng-click="open()">{{credit_category.name}}</a></li>
       </ul><!-- creditnav -->
     </div>
   </footer>
+  <script type="text/ng-template" id="myModalContent.html">
+    <h2>I'm a modal!</h2>
+    <ul>
+      <li ng-repeat="credit_category in credits">
+	{{ credit_category.id }}
+      </li>
+    </ul>
+    <p>Selected: <b>{{ selected.item }}</b></p>
+    <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+  </script>
   
 
   <section ng-repeat="credit_category in credits" id="{{credit_category.id}}" class="reveal-modal" data-reveal>
@@ -57,24 +67,6 @@
     <p ng-repeat="credit in credit_category.credits" ng-bind-html="credit"></p>
   </section>
 </div><!-- creditctrl -->
-
-<div class="row">
-  <div class="small-12.columns">
-    <div ng-controller="ModalDemoCtrl">
-      <script type="text/ng-template" id="myModalContent.html">
-	<h3>I'm a modal!</h3>
-	<ul>
-	  <li ng-repeat="item in items">
-	    <a ng-click="selected.item = item">{{ item }}</a>
-	  </li>
-	</ul>
-	<p>Selected: <b>{{ selected.item }}</b></p>
-	<a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
-      </script>
-      <button class="button" ng-click="open()">Open me!</button>
-    </div>
-  </div>
-</div>
 
 
 <!-- script src="bower_components/jquery/src/jquery.js"></script -->
