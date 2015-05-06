@@ -27,9 +27,16 @@ describe('Conference App', function() {
     });
     
     it('should display 3 levels of sponsorship', function() {
-	expect(sponsor_lists.count()).toBe(3);
+      expect(sponsor_lists.count()).toBe(3);
     });
     
+    it('should display Gold Sponsors first', function() {
+      expect(element(by.css('.columns:first-child h2')).getText()).toBe('GOLD SPONSORS');
+    });
+
+    it('should display Brawndo as the second sponsor under the last header', function() {
+      expect(element(by.css('.columns:last-child li:nth-child(2)')).getText()).toBe('Brawndo');
+    });
   });
   
 });
