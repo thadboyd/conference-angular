@@ -46,10 +46,10 @@
     "id": "libraries",
     "credits": [
       "<a href=\"http://foundation.zurb.com/\">Foundation</a> &copy; 2014 ZURB",
-      
-      "<a href=\"http://jquery.com/\">jQuery</a> &copy; 2005, 2014 jQuery Foundation",
-      
+           
       "<a href=\"https://angularjs.org/\">AngularJS</a> &copy; 2010-2015 Google, Inc.",
+      
+      "<a href=\"https://pineconellc.github.io/angular-foundation/\">Angular Foundation</a> &copy; 2014 Pinecone, LLC",
       
       "<a href=\"https://ftlabs.github.io/fastclick/\">FastClick</a> &copy; 2014 The Financial Times Limited"
     ]

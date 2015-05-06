@@ -50,6 +50,7 @@
       </ul><!-- creditnav -->
     </div>
   </footer>
+  
   <script type="text/ng-template" id="modal_credits">
     <h2 id={{data.id}}>{{data.name}}</h2>
     
@@ -57,21 +58,7 @@
     
     <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
   </script>
-  
-
-  <section ng-repeat="credit_category in credits" id="{{credit_category.id}}" class="reveal-modal" data-reveal>
-    <h2>{{credit_category.name}}</h2>
-    <p ng-repeat="credit in credit_category.credits" ng-bind-html="credit"></p>
-  </section>
-</div><!-- creditctrl -->
-
-
-<!-- script src="bower_components/jquery/src/jquery.js"></script -->
-<script src="js/vendor/jquery.js"></script>
-<script src="js/vendor/fastclick.js"></script>
-<script src="js/foundation/foundation.js"></script>
-<script src="js/foundation/foundation.topbar.js"></script>
-<script src="js/foundation/foundation.reveal.js"></script>
+</div><!-- CreditCtrl -->
 
 </body>
 </html>
