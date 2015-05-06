@@ -27,7 +27,7 @@
     <top-bar-section>
       <!-- Right Nav Section -->
       <ul class="right">
-        <li ng-repeat="nav_item in topnav" ng-class="{ active: isActive(nav_item.link.split('#')[1]) }">
+        <li ng-repeat="nav_item in topnav" ng-class="{ 'active': isActive(nav_item.link.split('#')[1]), 'has-dropdown': nav_item.children }">
 	  <a class="{{nav_item.class}}" href="{{nav_item.link}}">{{nav_item.name}}</a>
         </li>
       </ul>

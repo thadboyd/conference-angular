@@ -97,7 +97,7 @@ a:hover {
   color: white;
 }
 
-.top-bar-section li.active:not(.has-form) > a:not(.button) {
+.top-bar-section li.active:not(.has-form) > a:not(.button):not(.highlight) {
   color: #4b9cd7;
 }
 
