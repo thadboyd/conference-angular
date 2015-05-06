@@ -46,17 +46,15 @@
     
     <div>Additional credits and copyrights:
       <ul id="creditnav">
-	<li ng-repeat="credit_category in credits"><a href="javascript:void(0)" ng-click="open('myModalContent.html')">{{credit_category.name}}</a></li>
+	<li ng-repeat="credit_category in credits"><a href="javascript:void(0)" ng-click="open(credit_category)">{{credit_category.name}}</a></li>
       </ul><!-- creditnav -->
     </div>
   </footer>
-  <script type="text/ng-template" id="myModalContent.html">
-    <h2>I'm a modal!</h2>
-    <ul>
-      <li ng-repeat="credit_category in credits">
-	{{ credit_category.id }}
-      </li>
-    </ul>
+  <script type="text/ng-template" id="modal_credits">
+    <h2 id={{data.id}}>{{data.name}}</h2>
+    
+    <p ng-repeat="credit in data.credits" ng-bind-html="credit"></p>
+    
     <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
   </script>
   

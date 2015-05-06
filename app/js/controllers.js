@@ -42,13 +42,18 @@ conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal',
     
     $scope.open = function(options) {
       var modalInstance = $modal.open({
-	templateUrl: options,
+	templateUrl: 'modal_credits',
 	controller: 'ModalInstanceCtrl',
-	scope: $scope
+	resolve: {
+	  data: function() {
+	    return options;
+	  }
+	}
       })};    
   }]);
 
-conferenceControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance) {
+conferenceControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance, data) {
+  $scope.data = data;
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
