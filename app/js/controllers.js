@@ -14,8 +14,8 @@ conferenceControllers.controller('TopBarCtrl', ['$scope', '$http', '$location',
     };
   }]);
 
-conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http',
-  function($scope, $http) {
+conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http', '$modal',
+  function($scope, $http, $modal) {
     $http.get('data/categories.json').success(function(data) {
       $scope.categories = data;
     });
@@ -25,6 +25,17 @@ conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http',
     $http.get('data/events.json').success(function(data) {
       $scope.events = data;
     });
+    
+    $scope.open = function(options) {
+      var modalInstance = $modal.open({
+	templateUrl: 'modal_event',
+	controller: 'ModalInstanceCtrl',
+	resolve: {
+	  data: function() {
+	    return options;
+	  }
+	}
+      })};    
   }]);
 
 conferenceControllers.controller('SponsorsCtrl', ['$scope', '$http',

@@ -35,7 +35,7 @@
 	<p class="location">{{agenda_item.location}}</p>
 	<h3>{{agenda_item.desc}}</h3>
 	<footer>
-	  <a class="viewmore" href="javascript:void(0)" data-reveal-id="stock_images">
+	  <a class="viewmore" href="javascript:void(0)" ng-click="open(events[agenda_item.event])">
 	    <span class="fa fa-info-circle"></span>
 	    <p ng-if="events[agenda_item.event].name">with <strong>{{events[agenda_item.event].name}}</strong></p>
 	  </a>
@@ -44,3 +44,9 @@
     </li>
   </ul>
 </section>
+
+<script type="text/ng-template" id="modal_event">
+  <h2 id={{data.id}}>{{data.name}}</h2>
+  
+  <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+</script>
