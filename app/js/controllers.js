@@ -34,24 +34,17 @@ conferenceControllers.controller('SponsorsCtrl', ['$scope', '$http',
     });
   }]);
 
-conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal', '$log',
+conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal',
   function($scope, $http, $modal, $log) {
     $http.get('data/credits.json').success(function(data) {
       $scope.credits = data;
     });
-  $scope.open = function() {
-    var modalInstance = $modal.open({
-      templateUrl: 'myModalContent.html',
-      controller: 'ModalInstanceCtrl'
-    });
-
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
     
+    $scope.open = function() {
+      var modalInstance = $modal.open({
+	templateUrl: 'myModalContent.html',
+	controller: 'ModalInstanceCtrl'
+      })};    
   }]);
 
 conferenceControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance) {
