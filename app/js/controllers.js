@@ -40,9 +40,9 @@ conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal',
       $scope.credits = data;
     });
     
-    $scope.open = function() {
+    $scope.open = function(options) {
       var modalInstance = $modal.open({
-	templateUrl: 'myModalContent.html',
+	templateUrl: options,
 	controller: 'ModalInstanceCtrl'
       })};    
   }]);
