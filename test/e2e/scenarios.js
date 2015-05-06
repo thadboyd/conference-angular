@@ -11,6 +11,13 @@ describe('Conference App', function() {
     });
   });
   
+  it('should bring up the Libraries modal when you click on the third link in the footer', function() {
+    browser.get('app/index.html');
+    element(by.css('#creditnav li:nth-child(3) a')).click();
+    
+    expect(element(by.css('.reveal-modal h2')).getText()).toBe('LIBRARIES');
+  });
+  
   describe('sponsor view', function() {
     var sponsor_lists;
     
