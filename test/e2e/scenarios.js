@@ -11,11 +11,21 @@ describe('Conference App', function() {
     });
   });
   
-  it('should bring up the Libraries modal when you click on the third link in the footer', function() {
+  it('should bring up the Libraries modal when you click on the Libraries link in the footer', function() {
     browser.get('app/index.html');
-    element(by.css('#creditnav li:nth-child(3) a')).click();
+    element(by.linkText('libraries')).click();
     
     expect(element(by.css('.reveal-modal h2')).getText()).toBe('LIBRARIES');
+  });
+  
+  describe('schedule view', function() {
+    beforeEach(function() {
+      browser.get('app/index.html#/schedule');
+    });
+    
+    it('should list "Promoting viability" as fourth header under March 31', function() {
+      expect(element(by.css('section[id="03-31"] li:nth-child(4) h3')).getText()).toBe('Promoting viability');
+    });
   });
   
   describe('sponsor view', function() {
@@ -35,6 +45,7 @@ describe('Conference App', function() {
     });
 
     it('should display Brawndo as the second sponsor under the last header', function() {
+      //expect(sponsor_lists['Bronze', 1]).toBe('Brawndo');
       expect(element(by.css('.columns:last-child li:nth-child(2)')).getText()).toBe('Brawndo');
     });
   });
