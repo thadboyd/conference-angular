@@ -310,6 +310,33 @@ li.back h5 {
 /* END FOOTER */
 
 
+/* MODALS */
+.reveal-modal {
+  outline: 0 none;
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.15s linear 0s;
+}
+.fade.in {
+  opacity: 1;
+}
+.reveal-modal.fade {
+  transform: translate(0px, -25%);
+  transition: transform 0.3s ease-out 0s;
+}
+.reveal-modal.in {
+  transform: translate(0px, 0px);
+}
+.reveal-modal-bg.fade {
+  opacity: 0;
+}
+.reveal-modal-bg.in {
+  opacity: 1;
+}
+/* END MODALS */
+
+
 /* MEDIA QUERIES */
 
 /* MEDIUM AND SMALL */

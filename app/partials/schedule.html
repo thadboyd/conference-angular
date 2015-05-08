@@ -46,7 +46,7 @@
 </section>
 
 <script type="text/ng-template" id="modal_event">
-  <h2 id={{data.id}}>{{data.name}}</h2>
+  <h2>{{data.name}}<span ng-if="!data.name">Modal</span></h2>
   
   <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
 </script>
