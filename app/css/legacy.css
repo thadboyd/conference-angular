@@ -121,7 +121,6 @@ a:hover {
   border: none;
   font-family: "FontAwesome";
   font-weight: normal;
-  font-size: 100%;
   content: "\f067";	/* plus sign */
   font-size: 0.8rem;
   top: 0.1rem;

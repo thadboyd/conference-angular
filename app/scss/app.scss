@@ -2,42 +2,45 @@
 @import "foundation";
 
 // Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+/*
+@import 'foundation/components/grid';
+@import 'foundation/components/accordion';
+@import 'foundation/components/alert-boxes';
+@import 'foundation/components/block-grid';
+@import 'foundation/components/breadcrumbs';
+@import 'foundation/components/button-groups';
+@import 'foundation/components/buttons';
+@import 'foundation/components/clearing';
+@import 'foundation/components/dropdown';
+@import 'foundation/components/dropdown-buttons';
+@import 'foundation/components/flex-video';
+@import 'foundation/components/forms';
+@import 'foundation/components/icon-bar';
+@import 'foundation/components/inline-lists';
+@import 'foundation/components/joyride';
+@import 'foundation/components/keystrokes';
+@import 'foundation/components/labels';
+@import 'foundation/components/magellan';
+@import 'foundation/components/orbit';
+@import 'foundation/components/pagination';
+@import 'foundation/components/panels';
+@import 'foundation/components/pricing-tables';
+@import 'foundation/components/progress-bars';
+@import 'foundation/components/range-slider';
+@import 'foundation/components/reveal';
+@import 'foundation/components/side-nav';
+@import 'foundation/components/split-buttons';
+@import 'foundation/components/sub-nav';
+@import 'foundation/components/switches';
+@import 'foundation/components/tables';
+@import 'foundation/components/tabs';
+@import 'foundation/components/thumbs';
+@import 'foundation/components/tooltips';
+@import 'foundation/components/top-bar';
+@import 'foundation/components/type';
+@import 'foundation/components/offcanvas';
+@import 'foundation/components/visibility';
+*/
 
 
 // GENERAL
@@ -54,6 +57,22 @@ h1 {
   color: white;
   text-align: center;
   text-shadow: 2px 2px 2px $monsoon;
+  margin: 0;
+  @media #{$small-only} {
+    font-size: 300%;
+    padding: 0.5em;
+    line-height: 1.2;
+  }
+  @media #{$medium-only} {
+    padding: 12px;
+  }
+  @media #{$medium-up} {
+    font-size: 400%;
+    min-height: 160px;
+  } // medium-up
+  @media #{$large-up} {
+    padding: 64px 0;
+  } // large-up
 }
 
 .row:not(.intro):not(.icons) h2 {
@@ -74,25 +93,75 @@ header {
   background-color: $dktuna;
   text-transform: uppercase;
   color: $ltmanatee;
-  height: auto;
   box-shadow: 0 3px 3px $tuatara;
+  
+  @media #{$small-only} {
+    height: 72px;
+  }
+  @media #{$medium-up} {
+    height: auto;
+  }
   
   ul li {
     background-color: transparent;
     text-align: center;
-    display: inline-block;
-  }
+    @media #{$medium-up} {
+      display: inline-block;
+      line-height: 72px;
+    } // medium-up
+  } // ul li
   
-  .top-bar-section li:not(.has-form) a:not(.button).highlight {
-    background-color: $primary-color;
-  }
+  .title-area .name img {
+    @media #{$small-only} {
+      height: 50px;
+      padding: 4px 0 0;
+    }
+    @media #{$medium-up} {
+      height: 70px;
+      padding: 0 40px 6px;
+    }
+  } // .title-area .name img
+  
+  .top-bar-section {
+    li:not(.has-form) a:not(.button),
+    li.active:not(.has-form) > a:not(.button),
+    .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      text-transform: inherit;
+      line-height: inherit;
+    }
+    
+    li:not(.has-form) a:not(.button).highlight {
+      background-color: $primary-color;
+      color: $white;
+    }
+    
+    .has-dropdown > a:after {
+      @media #{small-only} {
+	top: 38%;
+	right: 0.5em;
+      }
+      @media #{medium-up} {
+	top: 2.5rem;
+      }
+    } // dropdown icon
+  } // .top-bar-section
 } // .top-bar
 
 .intro {
   text-align: center;
   
   h2 {
+    margin-top: 2.5rem;
     
+    @media #{small-only} {
+      font-size: 150%;
+    }
+    @media #{medium-up} {
+      font-size: 250%;
+    }
   } // h2
 } // .intro
 
@@ -127,6 +196,11 @@ header {
     } // a
   } // item
 } // .icon-bar
+@media #{$small-only} {
+  .eight-up .item {
+    width: 25%;
+  }
+}
 .category {
   &.fa {
     font-size: 36px;
