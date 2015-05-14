@@ -9457,13 +9457,22 @@ h1 {
   text-shadow: 2px 2px 2px #777777;
 }
 
-/* line 61, ../scss/app.scss */
+/* line 59, ../scss/app.scss */
+.row:not(.intro):not(.icons) h2 {
+  background-color: #12555B;
+  color: white;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 0.5rem 1em;
+}
+
+/* line 68, ../scss/app.scss */
 header {
   background-color: white;
   border-bottom: 1px solid #CED0D2;
 }
 
-/* line 66, ../scss/app.scss */
+/* line 73, ../scss/app.scss */
 .top-bar {
   background-color: #303443;
   text-transform: uppercase;
@@ -9471,23 +9480,23 @@ header {
   height: auto;
   box-shadow: 0 3px 3px #444444;
 }
-/* line 73, ../scss/app.scss */
+/* line 80, ../scss/app.scss */
 .top-bar ul li {
   background-color: transparent;
   text-align: center;
   display: inline-block;
 }
-/* line 79, ../scss/app.scss */
+/* line 86, ../scss/app.scss */
 .top-bar .top-bar-section li:not(.has-form) a:not(.button).highlight {
   background-color: #4DA2DE;
 }
 
-/* line 84, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 .intro {
   text-align: center;
 }
 
-/* line 94, ../scss/app.scss */
+/* line 101, ../scss/app.scss */
 .icons h2 {
   background: none;
   color: #777777;
@@ -9496,15 +9505,15 @@ header {
   font-family: "Open Sans", Arial, Helvetica, "FreeSans", sans-serif;
 }
 
-/* line 101, ../scss/app.scss */
+/* line 108, ../scss/app.scss */
 .icon-bar {
   background: none;
 }
-/* line 104, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .icon-bar > * {
   padding: 0.25em;
 }
-/* line 109, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 .icon-bar .item a {
   display: block;
   width: 100%;
@@ -9513,57 +9522,57 @@ header {
   background-color: #FFFFFF;
   border: solid 1px #E8E8E8;
 }
-/* line 117, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .icon-bar .item a:hover {
   background-color: #EEEEEE;
 }
 
-/* line 124, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 .category.fa {
   font-size: 36px;
 }
-/* line 127, ../scss/app.scss */
+/* line 134, ../scss/app.scss */
 .category.fa-microphone {
   color: #666666;
 }
-/* line 130, ../scss/app.scss */
+/* line 137, ../scss/app.scss */
 .category.fa-lightbulb-o {
   color: #D6C700;
 }
-/* line 133, ../scss/app.scss */
+/* line 140, ../scss/app.scss */
 .category.fa-graduation-cap {
   color: navy;
 }
-/* line 136, ../scss/app.scss */
+/* line 143, ../scss/app.scss */
 .category.fa-line-chart {
   color: #4DA2DE;
 }
-/* line 139, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 .category.fa-heart {
   color: red;
 }
-/* line 142, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
 .category.fa-code {
   color: #517C00;
 }
-/* line 145, ../scss/app.scss */
+/* line 152, ../scss/app.scss */
 .category.fa-comments {
   color: #B200FF;
 }
-/* line 148, ../scss/app.scss */
+/* line 155, ../scss/app.scss */
 .category.fa-diamond {
   color: #5E79FF;
 }
 
-/* line 155, ../scss/app.scss */
+/* line 162, ../scss/app.scss */
 .agenda-item {
   position: relative;
 }
-/* line 158, ../scss/app.scss */
+/* line 165, ../scss/app.scss */
 .agenda-item > div {
   position: relative;
 }
-/* line 162, ../scss/app.scss */
+/* line 169, ../scss/app.scss */
 .agenda-item .event-icon {
   font-size: 400%;
   color: #BBDDEE;
@@ -9575,14 +9584,14 @@ header {
   text-align: center;
   margin: 0 auto;
 }
-/* line 174, ../scss/app.scss */
+/* line 181, ../scss/app.scss */
 .agenda-item .time {
   background-color: #454B61;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
 }
-/* line 181, ../scss/app.scss */
+/* line 188, ../scss/app.scss */
 .agenda-item .desc {
   background-color: #FFFFFF;
   color: #878182;
@@ -9594,15 +9603,15 @@ header {
   padding: 0.5rem 1em;
   height: 12rem;
 }
-/* line 193, ../scss/app.scss */
+/* line 200, ../scss/app.scss */
 .agenda-item h3 {
   font-size: 110%;
 }
-/* line 197, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 .agenda-item p {
   margin: 0 0 0.1rem;
 }
-/* line 201, ../scss/app.scss */
+/* line 208, ../scss/app.scss */
 .agenda-item footer {
   position: absolute;
   left: 0;
@@ -9612,7 +9621,7 @@ header {
   width: 100%;
   padding: 0 1em;
 }
-/* line 211, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .agenda-item .category {
   position: absolute;
   left: 6px;
@@ -9625,62 +9634,62 @@ header {
   padding: 0.5em;
   box-shadow: 0 2px 4px #666666;
 }
-/* line 223, ../scss/app.scss */
+/* line 230, ../scss/app.scss */
 .agenda-item .category img {
   height: 2em;
   margin: 1em auto;
 }
-/* line 228, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 .agenda-item .viewmore {
   display: block;
   width: 100%;
 }
-/* line 232, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
 .agenda-item .viewmore .fa-info-circle {
   float: right;
   font-size: 1.5em;
 }
 
-/* line 241, ../scss/app.scss */
+/* line 248, ../scss/app.scss */
 #main-footer {
   background-color: #FFFFFF;
   margin-top: 1rem;
   border: solid 1px #CED0D2;
 }
 
-/* line 247, ../scss/app.scss */
+/* line 254, ../scss/app.scss */
 #creditnav {
   display: inline;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 252, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 #creditnav li {
   display: inline-block;
   vertical-align: middle;
   padding-left: 1em;
 }
 
-/* line 261, ../scss/app.scss */
+/* line 268, ../scss/app.scss */
 .fade {
   opacity: 0;
   transition: opacity 0.15s linear 0s;
 }
-/* line 265, ../scss/app.scss */
+/* line 272, ../scss/app.scss */
 .fade.in {
   opacity: 1;
 }
 
-/* line 270, ../scss/app.scss */
+/* line 277, ../scss/app.scss */
 .reveal-modal {
   outline: 0 none;
 }
-/* line 273, ../scss/app.scss */
+/* line 280, ../scss/app.scss */
 .reveal-modal.fade {
   transform: translate(0px, -25%);
   transition: transform 0.3s ease-out 0s;
 }
-/* line 277, ../scss/app.scss */
+/* line 284, ../scss/app.scss */
 .reveal-modal.in {
   transform: translate(0px, 0px);
 }

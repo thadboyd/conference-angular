@@ -56,6 +56,13 @@ h1 {
   text-shadow: 2px 2px 2px $monsoon;
 }
 
+.row:not(.intro):not(.icons) h2 {
+  background-color: $secondary-color;
+  color: white;
+  font-size: 120%;
+  font-weight: $font-weight-bold;
+  padding: 0.5rem 1em;
+} // .row h2
 // END GENERAL
 
 header {
