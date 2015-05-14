@@ -1,3 +1,5 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700|Nunito:400,700,300");
+@import url("font-awesome.min.css");
 /* line 364, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.2/";
@@ -7039,7 +7041,7 @@ meta.foundation-mq-topbar {
   font-weight: normal;
   padding-left: 0.9375rem;
   padding: 12px 0 12px 0.9375rem;
-  text-transform: uppercase;
+  text-transform: inherit;
   width: 100%;
 }
 /* line 345, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -9438,4 +9440,117 @@ th.hide-for-touch {
   .show-for-print {
     display: none !important;
   }
+}
+/* line 45, ../scss/app.scss */
+h1, h2 {
+  text-transform: uppercase;
+}
+
+/* line 49, ../scss/app.scss */
+h1 {
+  background-color: #12555B;
+  background-image: url("../img/simpleswirls.jpg");
+  background-repeat: repeat;
+  background-position: center center;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px #777;
+}
+
+/* line 61, ../scss/app.scss */
+header {
+  background-color: white;
+  border-bottom: 1px solid #ced0d2;
+}
+
+/* line 66, ../scss/app.scss */
+.top-bar {
+  background-color: #303443;
+  text-transform: uppercase;
+  color: #9097ae;
+  height: auto;
+  box-shadow: 0 3px 3px #444;
+}
+/* line 73, ../scss/app.scss */
+.top-bar ul li {
+  background-color: transparent;
+  text-align: center;
+  display: inline-block;
+}
+/* line 79, ../scss/app.scss */
+.top-bar .top-bar-section li:not(.has-form) a:not(.button).highlight {
+  background-color: #4da2de;
+}
+
+/* line 84, ../scss/app.scss */
+.intro {
+  text-align: center;
+}
+
+/* line 94, ../scss/app.scss */
+.icons h2 {
+  background: none;
+  color: #777777;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: "Open Sans", Arial, Helvetica, "FreeSans", sans-serif;
+}
+
+/* line 101, ../scss/app.scss */
+.icon-bar {
+  background: none;
+}
+/* line 104, ../scss/app.scss */
+.icon-bar > * {
+  padding: 0.25em;
+}
+/* line 109, ../scss/app.scss */
+.icon-bar .item a {
+  display: block;
+  width: 100%;
+  height: 4rem;
+  padding: 0.8rem 1em;
+  background-color: #FFFFFF;
+  border: solid 1px #e8e8e8;
+}
+/* line 117, ../scss/app.scss */
+.icon-bar .item a .active, .icon-bar .item a:hover {
+  background-color: #EEEEEE;
+}
+
+/* line 124, ../scss/app.scss */
+.category.fa {
+  font-size: 36px;
+}
+/* line 127, ../scss/app.scss */
+.category.fa-microphone {
+  color: #666666;
+}
+/* line 130, ../scss/app.scss */
+.category.fa-lightbulb-o {
+  color: #D6C700;
+}
+/* line 133, ../scss/app.scss */
+.category.fa-graduation-cap {
+  color: navy;
+}
+/* line 136, ../scss/app.scss */
+.category.fa-line-chart {
+  color: #4da2de;
+}
+/* line 139, ../scss/app.scss */
+.category.fa-heart {
+  color: red;
+}
+/* line 142, ../scss/app.scss */
+.category.fa-code {
+  color: #517C00;
+}
+/* line 145, ../scss/app.scss */
+.category.fa-comments {
+  color: #B200FF;
+}
+/* line 148, ../scss/app.scss */
+.category.fa-diamond {
+  color: #5E79FF;
 }

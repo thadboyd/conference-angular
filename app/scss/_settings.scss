@@ -51,9 +51,12 @@
 // a. Base
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// Fonts
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,700|Nunito:400,700,300');
+@import url('font-awesome.min.css');
+
 // This is the default html and body font-size for the base rem value.
 // $rem-base: 16px;
-
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import 'foundation/functions';
 
@@ -101,14 +104,14 @@ $white       : #FFFFFF;
 // $vapor       : #F6F6F6;
 $white-smoke : #F5F5F5;
 // $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
+$smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
 // $aluminum    : #999999;
 // $jumbo       : #888888;
-// $monsoon     : #777777;
-// $steel       : #666666;
+$monsoon     : #777777;
+$steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
@@ -1425,7 +1428,7 @@ $topbar-link-bg-color-hover: $topbar-link-bg-hover;
 $topbar-link-bg-active: $topbar-link-bg;
 $topbar-link-bg-active-hover: $topbar-link-bg-color-hover;
 // $topbar-link-font-family: $body-font-family;
-$topbar-link-text-transform: uppercase;
+$topbar-link-text-transform: inherit;
 // $topbar-link-padding: ($topbar-height / 3);
 // $topbar-back-link-size: rem-calc(18);
 // $topbar-link-dropdown-padding: rem-calc(20);

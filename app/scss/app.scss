@@ -38,3 +38,115 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+
+// GENERAL
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  background-color: #12555B;
+  background-image: url('../img/simpleswirls.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px #777;
+}
+
+// END GENERAL
+
+header {
+  background-color: white;
+  border-bottom: 1px solid #ced0d2;
+}
+
+.top-bar {
+  background-color: #303443;
+  text-transform: uppercase;
+  color: #9097ae;
+  height: auto;
+  box-shadow: 0 3px 3px #444;
+  
+  ul li {
+    background-color: transparent;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .top-bar-section li:not(.has-form) a:not(.button).highlight {
+    background-color: #4da2de;
+  }
+} // .top-bar
+
+.intro {
+  text-align: center;
+  
+  h2 {
+    
+  } // h2
+} // .intro
+
+
+// ICON BAR
+.icons h2 {
+  background: none;
+  color: $monsoon;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: $font-family-sans-serif;
+}
+.icon-bar {
+  background: none;
+  
+  > * {
+    padding: 0.25em;
+  }
+  
+  .item {
+    a {
+      display: block;
+      width: 100%;
+      height: 4rem;
+      padding: 0.8rem 1em;
+      background-color: $white;
+      border: solid 1px #e8e8e8;
+      
+      .active, &:hover {
+	background-color: $smoke;
+      }
+    } // a
+  } // item
+} // .icon-bar
+.category {
+  &.fa {
+    font-size: 36px;
+  }
+  &.fa-microphone {
+    color: $steel;
+  }
+  &.fa-lightbulb-o {
+    color: #D6C700;
+  }
+  &.fa-graduation-cap {
+    color: navy;
+  }
+  &.fa-line-chart {
+    color: $primary-color;
+  }
+  &.fa-heart {
+    color: red;
+  }
+  &.fa-code {
+    color: #517C00;
+  }
+  &.fa-comments {
+    color: #B200FF;
+  }
+  &.fa-diamond {
+    color: #5E79FF;
+  }
+} // category
+// END ICON BAR
