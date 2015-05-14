@@ -95,8 +95,8 @@ $font-family-sans-serif: "Open Sans", Arial, Helvetica, "FreeSans", sans-serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal;
-// $font-weight-bold: bold;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
 
 $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -113,13 +113,26 @@ $smoke       : #EEEEEE;
 $monsoon     : #777777;
 $steel       : #666666;
 // $charcoal    : #555555;
-// $tuatara     : #444444;
+$tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
 
+// Custom colors
+$ltiron		: #CED0D2;
+$dksmoke	: #E8E8E8;
+$dktuna		: #303443;
+$ltmanatee	: #9097AE;
+$ltcorn		: #D6C700;
+$ltverdun	: #517C00;
+$ltelecviolet	: #B200FF;
+$ltdodger	: #5E79FF;
+$ltspindle	: #BBDDEE;
+$ltriver	: #454B61;
+$subgray	: #878182;
+
 // We use these as default colors throughout
-$primary-color: #4da2de;
+$primary-color: #4DA2DE;
 $secondary-color: #12555B;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -723,7 +736,7 @@ $icon-bar-bg: none;
 // $icon-bar-icon-size: 1.875rem;
 // $icon-bar-image-width: 1.875rem;
 // $icon-bar-image-height: 1.875rem;
-// $icon-bar-active-color: $primary-color;
+$icon-bar-active-color: $smoke;
 // $icon-bar-item-padding: 1.25rem;
 
 // We use this to set default opacity and cursor for disabled icons.

@@ -49,7 +49,9 @@
            
       "<a href=\"https://angularjs.org/\">AngularJS</a> &copy; 2010-2015 Google, Inc.",
       
-      "<a href=\"https://pineconellc.github.io/angular-foundation/\">Angular Foundation</a> &copy; 2014 Pinecone, LLC"
+      "<a href=\"https://pineconellc.github.io/angular-foundation/\">Angular Foundation</a> &copy; 2014 Pinecone, LLC",
+      
+      "<a href=\"http://sass-lang.com/\">Sass</a> &copy; 2006-2015 <a href=\"//www.hamptoncatlin.com/\">Hampton Catlin</a>, <a href=\"//nex-3.com/\">Natalie Weizenbaum</a>, <a href=\"//chriseppstein.github.io/\">Chris Eppstein</a>, and numerous contributors.<br/><a href=\"http://compass-style.org/\">Compass</a> &copy; 2008-2015 Chris Eppstein."
     ]
   },{
     "name": "song lyrics",
