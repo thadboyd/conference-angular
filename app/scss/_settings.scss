@@ -114,11 +114,12 @@ $monsoon     : #777777;
 $steel       : #666666;
 // $charcoal    : #555555;
 $tuatara     : #444444;
-// $oil         : #333333;
+$oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
 
 // Custom colors
+$allports	: #0076A3;
 $ltiron		: #CED0D2;
 $dksmoke	: #E8E8E8;
 $dktuna		: #303443;
@@ -130,6 +131,7 @@ $ltdodger	: #5E79FF;
 $ltspindle	: #BBDDEE;
 $ltriver	: #454B61;
 $subgray	: #878182;
+$lthavelock	: #4B9CD7;
 
 // We use these as default colors throughout
 $primary-color: #4DA2DE;
@@ -1416,7 +1418,7 @@ $icon-bar-active-color: $smoke;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #303443;
+$topbar-bg-color: $dktuna;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1430,13 +1432,13 @@ $topbar-bg-color: #303443;
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $white;
 $topbar-link-color-hover: $white;
-$topbar-link-color-active: #4b9cd7;
+$topbar-link-color-active: $lthavelock;
 $topbar-link-color-active-hover: $topbar-link-color-hover;
 // $topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg-color;
-$topbar-link-bg-hover: #0078a0;
+$topbar-link-bg-hover: $allports;
 $topbar-link-bg-color-hover: $topbar-link-bg-hover;
 $topbar-link-bg-active: $topbar-link-bg;
 $topbar-link-bg-active-hover: $topbar-link-bg-color-hover;

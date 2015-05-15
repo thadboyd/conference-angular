@@ -90,13 +90,15 @@ header {
 }
 
 .top-bar {
-  background-color: $dktuna;
   text-transform: uppercase;
   color: $ltmanatee;
   box-shadow: 0 3px 3px $tuatara;
   
   @media #{$small-only} {
     height: 72px;
+    &.expanded .title-area {
+      background-color: $oil;
+    }
   }
   @media #{$medium-up} {
     height: auto !important;
@@ -121,38 +123,41 @@ header {
       height: 70px;
       padding: 0 40px 6px;
     }
-  } // .title-area .name img
-  
-  .top-bar-section {
-    li:not(.has-form) a:not(.button),
-    li.active:not(.has-form) > a:not(.button),
-    .dropdown li:not(.has-form):not(.active) > a:not(.button) {
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      text-transform: inherit;
-      line-height: inherit;
-    }
-    
-    li:not(.has-form) a:not(.button).highlight {
-      background-color: $primary-color;
-      color: $white;
-    }
-    
-    .has-dropdown > a:after {
-      margin-top: 0 !important;
-      @media #{small-only} {
-	top: 38% !important;
-	right: 0.5em !important;
-	background-color: green !important;
-      }
-      @media #{medium-up} {
-	top: 2.5rem !important;
-	background-color: red !important;
-      }
-    } // dropdown icon
-  } // .top-bar-section
+  } // .title-area .name img  
 } // .top-bar
+
+.top-bar-section {
+  li:not(.has-form) a:not(.button),
+  li.active:not(.has-form) > a:not(.button),
+  .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+    line-height: inherit;
+    @media #{$small-only} {
+      &:not(:hover) {
+	background-color: $topbar-bg-color;
+      }
+    }
+  }
+  
+  li:not(.has-form) a:not(.button).highlight {
+    background-color: $primary-color;
+    color: $white;
+  }
+  
+  .has-dropdown > a:after {
+    margin-top: 0;
+    @media #{$small-only} {
+      top: 38%;
+      right: 0.5em;
+    }
+    @media #{$medium-up} {
+      top: 2.1rem;
+    }
+  } // dropdown icon
+} // .top-bar-section
 
 .intro {
   text-align: center;
