@@ -114,9 +114,6 @@ header {
   
   ul li {
     text-align: center;
-    @media #{$small-only} {
-      background-color: $topbar-bg-color;
-    }
     @media #{$medium-up} {
       background-color: transparent;
       line-height: 72px;
@@ -136,6 +133,10 @@ header {
 } // .top-bar
 
 .top-bar-section {
+  @media #{$small-only} {
+    background-color: $topbar-bg-color;
+  }
+  
   li:not(.has-form) a:not(.button),
   li.active:not(.has-form) > a:not(.button),
   .dropdown li:not(.has-form):not(.active) > a:not(.button) {
@@ -161,6 +162,19 @@ header {
       top: 2.1rem;
     }
   } // dropdown icon
+  
+  li.back h5 {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-size: 100%;
+    
+    a:link {
+      background-color: $black;
+      &:hover {
+	background-color: $topbar-link-bg-hover;
+      }
+    }
+  }
 } // .top-bar-section
 
 .intro {

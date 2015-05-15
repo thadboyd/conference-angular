@@ -15,7 +15,7 @@
 </head>
 <body>
 <div ng-controller="TopBarCtrl">
-  <top-bar>
+  <top-bar back-text="&#61536;"><!-- &#61536; is left arrow in Font Awesome -->
     <ul class="title-area">
       <li class="name">
         <a href="javascript:void(0)"><img src="img/con-logo.png" alt="New Media Con" /></a>
@@ -33,7 +33,7 @@
 	  </li>
 	  <li ng-if="nav_item.children" ng-class="{ 'active': isActive(nav_item.link.split('#')[1])}" class="has-dropdown not-click" has-dropdown>
 	    <a class="{{nav_item.class}}" href="{{nav_item.link}}">{{nav_item.name}}</a>
-	    <ul class="dropdown">
+	    <ul class="dropdown" top-bar-dropdown>
 	      <li ng-repeat="subnav_item in nav_item.children"><a href="{{subnav_item.link}}">{{subnav_item.name}}</a></li>
 	    </ul>
 	  </li>
