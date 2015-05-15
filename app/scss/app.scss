@@ -105,10 +105,13 @@ header {
     // !important needed to override inline styling created by Angular Foundation
   }
   
-  ul li {
-    background-color: transparent;
+  ul > div, ul li {
     text-align: center;
+    @media #{$small-only} {
+      background-color: $topbar-bg-color;
+    }
     @media #{$medium-up} {
+      background-color: transparent;
       display: inline-block;
       line-height: 72px;
     } // medium-up
@@ -135,11 +138,6 @@ header {
     font-weight: inherit;
     text-transform: inherit;
     line-height: inherit;
-    @media #{$small-only} {
-      &:not(:hover) {
-	background-color: $topbar-bg-color;
-      }
-    }
   }
   
   li:not(.has-form) a:not(.button).highlight {
