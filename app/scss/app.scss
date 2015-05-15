@@ -99,7 +99,8 @@ header {
     height: 72px;
   }
   @media #{$medium-up} {
-    height: auto;
+    height: auto !important;
+    // !important needed to override inline styling created by Angular Foundation
   }
   
   ul li {
@@ -139,12 +140,15 @@ header {
     }
     
     .has-dropdown > a:after {
+      margin-top: 0 !important;
       @media #{small-only} {
-	top: 38%;
-	right: 0.5em;
+	top: 38% !important;
+	right: 0.5em !important;
+	background-color: green !important;
       }
       @media #{medium-up} {
-	top: 2.5rem;
+	top: 2.5rem !important;
+	background-color: red !important;
       }
     } // dropdown icon
   } // .top-bar-section
@@ -198,7 +202,7 @@ header {
 } // .icon-bar
 @media #{$small-only} {
   .eight-up .item {
-    width: 25%;
+    width: 25% !important;
   }
 }
 .category {

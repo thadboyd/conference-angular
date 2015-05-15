@@ -9555,36 +9555,36 @@ header {
 @media only screen and (min-width: 40.0625em) {
   /* line 92, ../scss/app.scss */
   .top-bar {
-    height: auto;
+    height: auto !important;
   }
 }
-/* line 105, ../scss/app.scss */
+/* line 106, ../scss/app.scss */
 .top-bar ul li {
   background-color: transparent;
   text-align: center;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 105, ../scss/app.scss */
+  /* line 106, ../scss/app.scss */
   .top-bar ul li {
     display: inline-block;
     line-height: 72px;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 114, ../scss/app.scss */
+  /* line 115, ../scss/app.scss */
   .top-bar .title-area .name img {
     height: 50px;
     padding: 4px 0 0;
   }
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 114, ../scss/app.scss */
+  /* line 115, ../scss/app.scss */
   .top-bar .title-area .name img {
     height: 70px;
     padding: 0 40px 6px;
   }
 }
-/* line 126, ../scss/app.scss */
+/* line 127, ../scss/app.scss */
 .top-bar .top-bar-section li:not(.has-form) a:not(.button),
 .top-bar .top-bar-section li.active:not(.has-form) > a:not(.button),
 .top-bar .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
@@ -9594,47 +9594,53 @@ header {
   text-transform: inherit;
   line-height: inherit;
 }
-/* line 136, ../scss/app.scss */
+/* line 137, ../scss/app.scss */
 .top-bar .top-bar-section li:not(.has-form) a:not(.button).highlight {
   background-color: #4DA2DE;
   color: #FFFFFF;
 }
+/* line 142, ../scss/app.scss */
+.top-bar .top-bar-section .has-dropdown > a:after {
+  margin-top: 0 !important;
+}
 @media small-only {
-  /* line 141, ../scss/app.scss */
+  /* line 142, ../scss/app.scss */
   .top-bar .top-bar-section .has-dropdown > a:after {
-    top: 38%;
-    right: 0.5em;
+    top: 38% !important;
+    right: 0.5em !important;
+    background-color: green !important;
   }
 }
 @media medium-up {
-  /* line 141, ../scss/app.scss */
+  /* line 142, ../scss/app.scss */
   .top-bar .top-bar-section .has-dropdown > a:after {
-    top: 2.5rem;
+    top: 2.5rem !important;
+    background-color: red !important;
   }
 }
 
-/* line 153, ../scss/app.scss */
+/* line 157, ../scss/app.scss */
 .intro {
   text-align: center;
 }
-/* line 156, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 .intro h2 {
   margin-top: 2.5rem;
 }
 @media small-only {
-  /* line 156, ../scss/app.scss */
+  /* line 160, ../scss/app.scss */
   .intro h2 {
     font-size: 150%;
   }
 }
 @media medium-up {
-  /* line 156, ../scss/app.scss */
+  /* line 160, ../scss/app.scss */
   .intro h2 {
     font-size: 250%;
   }
 }
 
-/* line 170, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
 .icons h2 {
   background: none;
   color: #777777;
@@ -9643,15 +9649,15 @@ header {
   font-family: "Open Sans", Arial, Helvetica, "FreeSans", sans-serif;
 }
 
-/* line 177, ../scss/app.scss */
+/* line 181, ../scss/app.scss */
 .icon-bar {
   background: none;
 }
-/* line 180, ../scss/app.scss */
+/* line 184, ../scss/app.scss */
 .icon-bar > * {
   padding: 0.25em;
 }
-/* line 185, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 .icon-bar .item a {
   display: block;
   width: 100%;
@@ -9660,63 +9666,63 @@ header {
   background-color: #FFFFFF;
   border: solid 1px #E8E8E8;
 }
-/* line 193, ../scss/app.scss */
+/* line 197, ../scss/app.scss */
 .icon-bar .item a:hover {
   background-color: #EEEEEE;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 200, ../scss/app.scss */
+  /* line 204, ../scss/app.scss */
   .eight-up .item {
-    width: 25%;
+    width: 25% !important;
   }
 }
-/* line 205, ../scss/app.scss */
+/* line 209, ../scss/app.scss */
 .category.fa {
   font-size: 36px;
 }
-/* line 208, ../scss/app.scss */
+/* line 212, ../scss/app.scss */
 .category.fa-microphone {
   color: #666666;
 }
-/* line 211, ../scss/app.scss */
+/* line 215, ../scss/app.scss */
 .category.fa-lightbulb-o {
   color: #D6C700;
 }
-/* line 214, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .category.fa-graduation-cap {
   color: navy;
 }
-/* line 217, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 .category.fa-line-chart {
   color: #4DA2DE;
 }
-/* line 220, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 .category.fa-heart {
   color: red;
 }
-/* line 223, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .category.fa-code {
   color: #517C00;
 }
-/* line 226, ../scss/app.scss */
+/* line 230, ../scss/app.scss */
 .category.fa-comments {
   color: #B200FF;
 }
-/* line 229, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 .category.fa-diamond {
   color: #5E79FF;
 }
 
-/* line 236, ../scss/app.scss */
+/* line 240, ../scss/app.scss */
 .agenda-item {
   position: relative;
 }
-/* line 239, ../scss/app.scss */
+/* line 243, ../scss/app.scss */
 .agenda-item > div {
   position: relative;
 }
-/* line 243, ../scss/app.scss */
+/* line 247, ../scss/app.scss */
 .agenda-item .event-icon {
   font-size: 400%;
   color: #BBDDEE;
@@ -9728,14 +9734,14 @@ header {
   text-align: center;
   margin: 0 auto;
 }
-/* line 255, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 .agenda-item .time {
   background-color: #454B61;
   color: #FFFFFF;
   text-align: center;
   margin: 0;
 }
-/* line 262, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 .agenda-item .desc {
   background-color: #FFFFFF;
   color: #878182;
@@ -9747,15 +9753,15 @@ header {
   padding: 0.5rem 1em;
   height: 12rem;
 }
-/* line 274, ../scss/app.scss */
+/* line 278, ../scss/app.scss */
 .agenda-item h3 {
   font-size: 110%;
 }
-/* line 278, ../scss/app.scss */
+/* line 282, ../scss/app.scss */
 .agenda-item p {
   margin: 0 0 0.1rem;
 }
-/* line 282, ../scss/app.scss */
+/* line 286, ../scss/app.scss */
 .agenda-item footer {
   position: absolute;
   left: 0;
@@ -9765,7 +9771,7 @@ header {
   width: 100%;
   padding: 0 1em;
 }
-/* line 292, ../scss/app.scss */
+/* line 296, ../scss/app.scss */
 .agenda-item .category {
   position: absolute;
   left: 6px;
@@ -9778,62 +9784,62 @@ header {
   padding: 0.5em;
   box-shadow: 0 2px 4px #666666;
 }
-/* line 304, ../scss/app.scss */
+/* line 308, ../scss/app.scss */
 .agenda-item .category img {
   height: 2em;
   margin: 1em auto;
 }
-/* line 309, ../scss/app.scss */
+/* line 313, ../scss/app.scss */
 .agenda-item .viewmore {
   display: block;
   width: 100%;
 }
-/* line 313, ../scss/app.scss */
+/* line 317, ../scss/app.scss */
 .agenda-item .viewmore .fa-info-circle {
   float: right;
   font-size: 1.5em;
 }
 
-/* line 322, ../scss/app.scss */
+/* line 326, ../scss/app.scss */
 #main-footer {
   background-color: #FFFFFF;
   margin-top: 1rem;
   border: solid 1px #CED0D2;
 }
 
-/* line 328, ../scss/app.scss */
+/* line 332, ../scss/app.scss */
 #creditnav {
   display: inline;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 333, ../scss/app.scss */
+/* line 337, ../scss/app.scss */
 #creditnav li {
   display: inline-block;
   vertical-align: middle;
   padding-left: 1em;
 }
 
-/* line 342, ../scss/app.scss */
+/* line 346, ../scss/app.scss */
 .fade {
   opacity: 0;
   transition: opacity 0.15s linear 0s;
 }
-/* line 346, ../scss/app.scss */
+/* line 350, ../scss/app.scss */
 .fade.in {
   opacity: 1;
 }
 
-/* line 351, ../scss/app.scss */
+/* line 355, ../scss/app.scss */
 .reveal-modal {
   outline: 0 none;
 }
-/* line 354, ../scss/app.scss */
+/* line 358, ../scss/app.scss */
 .reveal-modal.fade {
   transform: translate(0px, -25%);
   transition: transform 0.3s ease-out 0s;
 }
-/* line 358, ../scss/app.scss */
+/* line 362, ../scss/app.scss */
 .reveal-modal.in {
   transform: translate(0px, 0px);
 }
