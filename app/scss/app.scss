@@ -105,16 +105,22 @@ header {
     // !important needed to override inline styling created by Angular Foundation
   }
   
-  ul > div, ul li {
+  ul > div, ul > li {
+    @media #{$medium-up} {
+      display: inline-block;
+      height: 65px;
+    } // medium-up
+  } // ul > div
+  
+  ul li {
     text-align: center;
     @media #{$small-only} {
       background-color: $topbar-bg-color;
     }
     @media #{$medium-up} {
       background-color: transparent;
-      display: inline-block;
       line-height: 72px;
-    } // medium-up
+    }
   } // ul li
   
   .title-area .name img {
@@ -163,10 +169,10 @@ header {
   h2 {
     margin-top: 2.5rem;
     
-    @media #{small-only} {
+    @media #{$small-only} {
       font-size: 150%;
     }
-    @media #{medium-up} {
+    @media #{$medium-up} {
       font-size: 250%;
     }
   } // h2
@@ -330,6 +336,7 @@ header {
   background-color: $white;
   margin-top: 1rem;
   border: solid 1px $ltiron;
+  padding: 0.5em 1em;
 } // #main-footer
 
 #creditnav {

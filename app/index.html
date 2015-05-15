@@ -31,7 +31,7 @@
 	  <li ng-if="!nav_item.children" ng-class="{ 'active': isActive(nav_item.link.split('#')[1])}">
 	    <a class="{{nav_item.class}}" href="{{nav_item.link}}">{{nav_item.name}}</a>
 	  </li>
-	  <li ng-if="nav_item.children" class="has-dropdown not-click" has-dropdown>
+	  <li ng-if="nav_item.children" ng-class="{ 'active': isActive(nav_item.link.split('#')[1])}" class="has-dropdown not-click" has-dropdown>
 	    <a class="{{nav_item.class}}" href="{{nav_item.link}}">{{nav_item.name}}</a>
 	    <ul class="dropdown">
 	      <li ng-repeat="subnav_item in nav_item.children"><a href="{{subnav_item.link}}">{{subnav_item.name}}</a></li>
