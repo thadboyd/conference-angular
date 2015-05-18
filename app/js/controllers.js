@@ -76,19 +76,3 @@ conferenceControllers.controller('ModalInstanceCtrl', function ($scope, $modalIn
     $modalInstance.dismiss('cancel');
   };
 });
-
-conferenceControllers.controller("ItemController",
-  function ($scope, $location, $anchorScroll) {
-  $scope.terms = {
-    "fruits":["Apple","Mango","orange",
-             "litchi","pears"],
-    "flowers":["Rose","lily","jasmin",
-              "lotus","sunflower"],
-    "vegetables":["Potato","tomato","ladyfinger",
-                 "couliflower","cabbage"],
-    "games":["Cricket","football","tennis",
-            "baseball","hockey"],
-    "countries":["India","America","China",
-                "united kingdom","germany"]
-  };
-});

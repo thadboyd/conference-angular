@@ -32,14 +32,14 @@
     "link":"#/test",
     "children": [
       {
-	"name": "March 31",
-	"link": "#/test#03-31"
+	"name": "Gold",
+	"link": "#/test#Gold"
       },{
-	"name": "April 1",
-	"link": "#/test#04-01"
+	"name": "Silver",
+	"link": "#/test#Silver"
       },{
-	"name": "April 2",
-	"link": "#/test#04-02"
+	"name": "Bronze",
+	"link": "#/test#Bronze"
       }
     ]
   }
