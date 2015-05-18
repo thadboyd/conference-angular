@@ -76,3 +76,26 @@ conferenceControllers.controller('ModalInstanceCtrl', function ($scope, $modalIn
     $modalInstance.dismiss('cancel');
   };
 });
+
+conferenceControllers.controller("TestCtrl",
+  function ($scope, $location, $anchorScroll) {
+  $scope.sponsors = {
+    "Gold": [
+      "Prescott Pharmaceuticals",
+      "Hawthorne Wipes",
+      "Megadodo Publications",
+      "Acme, Inc."
+    ],
+    "Silver": [
+      "Dunder Mifflin Paper Company, Inc.",
+      "Duff Beer",
+      "Spishak"
+    ],
+    "Bronze": [
+      "Femident Toothpaste",
+      "Brawndo",
+      "Kreb of the Loom"
+    ]
+  };
+
+});
