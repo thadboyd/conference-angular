@@ -23,11 +23,137 @@ conferenceControllers.controller('TopBarCtrl', ['$scope', '$http', '$location', 
 
 conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http', '$modal',
   function($scope, $http, $modal) {
+    // 'days' must be defined directly in controller;
+    // parsing from JSON creates race condition
+    // that causes anchorScroll to fail.
+    $scope.days = [
+      {
+	"id": "03-31",
+	"header": "Tuesday, March 31, 2015",
+	"schedule": [
+	  {
+	    "event": "breakfast",
+	    "time": "7:00 AM - 8:00 AM",
+	    "location": "Dining Hall",
+	    "desc": "Breakfast"
+	  },
+	  {
+	    "event": "registration",
+	    "time": "7:00 AM - 6:00 PM",
+	    "location": "Lobby",
+	    "desc": "Registration open"
+	  },
+	  {
+	    "event": "newman",
+	    "time": "8:30 AM - 10:00 AM",
+	    "location": "Room 42",
+	    "desc": "Transitioning our company by awareness of functionality",
+	    "category": "keynote"
+	  },
+	  {
+	    "event": "campbell",
+	    "time": "11:00 AM - 12:00 PM",
+	    "location": "Room 23",
+	    "desc": "Promoting viability",
+	    "category": "ideas"
+	  },
+	  {
+	    "event": "fletcher",
+	    "time": "11:00 AM - 12:00 PM",
+	    "location": "Hangar 18",
+	    "desc": "Providing our supply chain with diversity",
+	    "category": "lifecycle"
+	  },
+	  {
+	    "event": "ebilchik",
+	    "time": "11:00 AM - 12:00 PM",
+	    "location": "Area 51",
+	    "desc": "We will distill our identity through client-centric solutions",
+	    "category": "chart"
+	  },
+	  {
+	    "event": "steckler",
+	    "time": "11:00 AM - 12:00 PM",
+	    "location": "Area 51-A",
+	    "desc": "At the end of the day we must monetize our assets",
+	    "category": "lesson"
+	  },
+	  {
+	    "event": "lunch",
+	    "time": "12:00 PM - 1:30 PM",
+	    "location": "Dining Hall",
+	    "desc": "Lunch"
+	  }
+	]
+      },{
+	"id": "04-01",
+	"header": "Wednesday, April 1, 2015",
+	"schedule": [
+	  {
+	    "event": "breakfast",
+	    "time": "7:00 AM - 8:00 AM",
+	    "location": "Dining Hall",
+	    "desc": "Breakfast"
+	  },
+	  {
+	    "event": "finklestein",
+	    "time": "8:30 AM - 10:00 AM",
+	    "location": "Hank Hall",
+	    "desc": "The fundamentals of change",
+	    "category": "development"
+	  },
+	  {
+	    "event": "macintosh",
+	    "time": "8:30 AM - 10:00 AM",
+	    "location": "Don Hall",
+	    "desc": "Can you visualize a value-added experience?",
+	    "category": "talk"
+	  },
+	  {
+	    "event": "earley",
+	    "time": "11:00 AM - 12:00 PM",
+	    "location": "Harren Hall",
+	    "desc": "Grow the business infrastructure and monetize our assets",
+	    "category": "ideas"
+	  }
+	]
+      },{
+	"id": "04-02",
+	"header": "Thursday, April 2, 2015",
+	"schedule": [
+	  {
+	    "event": "breakfast",
+	    "time": "7:00 AM - 8:00 AM",
+	    "location": "Dining Hall",
+	    "desc": "Breakfast"
+	  },
+	  {
+	    "event": "spadowski",
+	    "time": "8:30 AM - 10:00 AM",
+	    "location": "In a van down by the river",
+	    "desc": "Bringing to the table our capitalized reputation",
+	    "category": "bonus"
+	  },
+	  {
+	    "event": "finklestein",
+	    "time": "8:30 AM - 10:00 AM",
+	    "location": "Sector 7G",
+	    "desc": "Proactively overseeing day-to-day operations",
+	    "category": "lifecycle"
+	  },
+	  {
+	    "event": "newman",
+	    "time": "11:00 AM - 12:00 PM",
+	    "location": "Room 101",
+	    "desc": "Services and deliverables with cross-platform innovation",
+	    "category": "keynote"
+	  }
+	]
+      }
+    ]
+    
     $http.get('data/categories.json').success(function(data) {
       $scope.categories = data;
-    });
-    $http.get('data/days.json').success(function(data) {
-      $scope.days = data;
     });
     $http.get('data/events.json').success(function(data) {
       $scope.events = data;
@@ -75,27 +201,4 @@ conferenceControllers.controller('ModalInstanceCtrl', function ($scope, $modalIn
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
-});
-
-conferenceControllers.controller("TestCtrl",
-  function ($scope, $location, $anchorScroll) {
-  $scope.sponsors = {
-    "Gold": [
-      "Prescott Pharmaceuticals",
-      "Hawthorne Wipes",
-      "Megadodo Publications",
-      "Acme, Inc."
-    ],
-    "Silver": [
-      "Dunder Mifflin Paper Company, Inc.",
-      "Duff Beer",
-      "Spishak"
-    ],
-    "Bronze": [
-      "Femident Toothpaste",
-      "Brawndo",
-      "Kreb of the Loom"
-    ]
-  };
-
 });

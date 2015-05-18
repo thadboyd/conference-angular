@@ -27,20 +27,5 @@
     "name": "Register",
     "link": "#/register",
     "class": "highlight"
-  },{
-    "name": "Test",
-    "link":"#/test",
-    "children": [
-      {
-	"name": "Gold",
-	"link": "#/test#Gold"
-      },{
-	"name": "Silver",
-	"link": "#/test#Silver"
-      },{
-	"name": "Bronze",
-	"link": "#/test#Bronze"
-      }
-    ]
   }
 ]
