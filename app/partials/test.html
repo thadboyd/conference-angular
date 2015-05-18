@@ -1,10 +1,10 @@
-<button ng-repeat="(key, value) in terms"
-	ng-click="jumpToLocation(key)">
+<a ng-repeat="(key, value) in terms"
+	href="#/test#{{key}}">
       {{key}}
-</button>
+</a>
 <div ng-repeat="(key, value) in terms" 
     id="{{key}}">
-  <h1>{{key}}<h1>
+  <h1>{{key}}</h1>
   <ol>
     <li ng-repeat="item in value">
       {{item}}

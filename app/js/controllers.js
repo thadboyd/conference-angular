@@ -4,14 +4,21 @@
 
 var conferenceControllers = angular.module('conferenceControllers', ['ngSanitize', 'mm.foundation']);
 
-conferenceControllers.controller('TopBarCtrl', ['$scope', '$http', '$location',
-  function($scope, $http, $location) {
+conferenceControllers.controller('TopBarCtrl', ['$scope', '$http', '$location', '$anchorScroll',
+  function($scope, $http, $location, $anchorScroll) {
     $http.get('data/topnav.json').success(function(data) {
       $scope.topnav = data;
     });
     $scope.isActive = function(viewLocation) {
       return viewLocation === $location.path();
     };
+    $scope.scrollTo = function(key){
+      var old = $location.hash();
+      $location.hash(id);
+      $anchorScroll();
+      //reset to old to keep any additional routing logic from kicking in
+      $location.hash(old);
+    }
   }]);
 
 conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http', '$modal',
@@ -84,8 +91,11 @@ conferenceControllers.controller("ItemController",
     "countries":["India","America","China",
                 "united kingdom","germany"]
   };
-  $scope.jumpToLocation = function(key){
-    $location.hash(key);
+  $scope.scrollTo = function(key){
+    var old = $location.hash();
+    $location.hash(id);
     $anchorScroll();
+    //reset to old to keep any additional routing logic from kicking in
+    $location.hash(old);
   }
 });
