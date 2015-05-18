@@ -24,6 +24,10 @@ conferenceApp.config(['$routeProvider',
       when('/register', {
         templateUrl: 'partials/register.html'
       }).
+      when('/test', {
+	templateUrl: 'partials/test.html',
+	controller: 'ItemController'
+      }).
       otherwise({
         redirectTo: '/schedule'
       });
