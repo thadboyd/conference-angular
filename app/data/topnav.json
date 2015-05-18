@@ -11,13 +11,13 @@
     "children": [
       {
 	"name": "March 31",
-	"link": "#/schedule/#03-31"
+	"link": "#/schedule#03-31"
       },{
 	"name": "April 1",
-	"link": "#/schedule/#04-01"
+	"link": "#/schedule#04-01"
       },{
 	"name": "April 2",
-	"link": "#/schedule/#04-02"
+	"link": "#/schedule#04-02"
       }
     ]
   },{
@@ -27,5 +27,20 @@
     "name": "Register",
     "link": "#/register",
     "class": "highlight"
+  },{
+    "name": "Test",
+    "link":"#/test",
+    "children": [
+      {
+	"name": "fruits",
+	"link": "#/test#fruits"
+      },{
+	"name": "flowers",
+	"link": "#/test#flowers"
+      },{
+	"name": "vegetables",
+	"link": "#/test#vegetables"
+      }
+    ]
   }
 ]

@@ -42,7 +42,7 @@ conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http', '$modal',
 	    return options;
 	  }
 	}
-      })};    
+      })};
   }]);
 
 conferenceControllers.controller('SponsorsCtrl', ['$scope', '$http',
