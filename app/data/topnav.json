@@ -32,14 +32,14 @@
     "link":"#/test",
     "children": [
       {
-	"name": "fruits",
-	"link": "#/test#fruits"
+	"name": "March 31",
+	"link": "#/test#03-31"
       },{
-	"name": "flowers",
-	"link": "#/test#flowers"
+	"name": "April 1",
+	"link": "#/test#04-01"
       },{
-	"name": "vegetables",
-	"link": "#/test#vegetables"
+	"name": "April 2",
+	"link": "#/test#04-02"
       }
     ]
   }
