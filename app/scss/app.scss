@@ -379,8 +379,17 @@ form {
   margin-top: 1rem;
 }
 @include placeholder {
-  color: #666;
+  color: $steel;
 }
+#registration-form input {
+  &.ng-invalid.ng-touched {
+    background-color: $alert-color;
+  }
+  &.ng-valid.ng-touched {
+    background-color: $success-color;
+  }
+}
+
 // END FORMS
 
 
