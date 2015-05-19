@@ -389,6 +389,10 @@ header {
     transform: translate(0px, 0px);
   }
   
+  .close-reveal-modal:hover {
+    color: red;
+  }
+  
   #modal_banner {    
     @media #{$medium-up} {
       max-width: 40%;
