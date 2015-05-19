@@ -3,7 +3,7 @@
   "description": "A Foundation-based demo site",
   "version": "0.0.2",
   "homepage": "http://thadde.us/demos/conference/",
-  "license": "MIT",
+  "license": "GPLv3",
   "private": true,
   "dependencies": {
     "angular": "1.4.x",
