@@ -11,6 +11,7 @@
     "angular-route": "1.4.x",
     "angular-sanitize": "1.4.x",
     "foundation": "5.5.x",
-    "angular-foundation": "0.6.x"
+    "angular-foundation": "0.6.x",
+    "font-awesome": "4.3.x"
   }
 }
