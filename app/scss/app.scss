@@ -42,6 +42,35 @@
 @import 'foundation/components/visibility';
 */
 
+// MIXINS
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+// Oh goody, vendor prefixes.
+// Sadly, need to use these for placeholder-shown to work correctly.
+// I think this is likely a Foundation issue rather than a browser support one.
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+  @include optional-at-root(':placeholder-shown') {
+    @content;
+  }
+}
+// END MIXINS
+
 
 // GENERAL
 
@@ -343,6 +372,16 @@ header {
       }
     } // .viewmore
 } // agenda-item
+
+
+// FORMS
+form {
+  margin-top: 1rem;
+}
+@include placeholder {
+  color: #666;
+}
+// END FORMS
 
 
 // FOOTER
