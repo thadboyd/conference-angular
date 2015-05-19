@@ -35,7 +35,7 @@
 	<p class="location">{{agenda_item.location}}</p>
 	<h3>{{agenda_item.desc}}</h3>
 	<footer>
-	  <a class="viewmore" href="javascript:void(0)" ng-click="open(events[agenda_item.event])">
+	  <a class="viewmore" href="javascript:void(0)" ng-click="open([agenda_item.event, events])">
 	    <span class="fa fa-info-circle"></span>
 	    <p ng-if="events[agenda_item.event].name">with <strong>{{events[agenda_item.event].name}}</strong></p>
 	  </a>
@@ -46,7 +46,23 @@
 </section>
 
 <script type="text/ng-template" id="modal_event">
-  <h2>{{data.name}}<span ng-if="!data.name">Modal</span></h2>
+  <div ng-if="!data[1][data[0]].image" class="right" id="modal_banner">
+    <span ng-if="!data[1][data[0]].image" class="fa fa-info-circle"></span>
+  </div>
+  <h2>{{data[1][data[0]].name}}<span ng-if="!data[1][data[0]].name">{{data[0]}}</span></h2>
+  <div ng-if="data[1][data[0]].image" class="right" id="modal_banner">
+    <img src="{{data[1][data[0]].image}}" alt="{{data[1][data[0]].name}}" />
+  </div>
+  
+  <p>If this were a real site and New Media Con were a real convention, this modal would have all sorts of useful information about {{data[1][data[0]].name}}<span ng-if="!data[1][data[0]].name">{{data[0]}}</span>.</p>
+  
+  <p>But it's not.  This is a demo site.  New Media Con is not a real convention<span ng-if="data[0] == 'registration'">, and you can't register for it</span>.</p>
+  
+  <p ng-if="data[1][data[0]].image">The person in that photo on the right isn't even really {{data[1][data[0]].name}}.  That's a <a href="javascript:void(0)" data-reveal-id="stock_images">stock photo</a>, courtesy of <a href="http://www.freeimages.com/">freeimages.com</a>.</p>
+  
+  <p ng-if="data[0] == 'registration'">There is, however, a <a href="#/register" ng-click="cancel()">Register</a> page, which demonstrates some Angular form validation.</p>
+  
+  <p ng-if="data[0] == 'breakfast' || data[0] == 'lunch'">You're just going to have to go fix your own {{data[0]}}.</p>
   
   <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
 </script>

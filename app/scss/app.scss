@@ -378,6 +378,8 @@ header {
   
 .reveal-modal {
   outline: 0 none;
+  min-height: 0;
+  text-align: justify;
   
   &.fade {
     transform: translate(0px, -25%);
@@ -385,6 +387,26 @@ header {
   }
   &.in {
     transform: translate(0px, 0px);
+  }
+  
+  #modal_banner {    
+    @media #{$medium-up} {
+      max-width: 40%;
+      margin-left: 1em;
+      margin-bottom: 1rem;
+    }
+    img {
+      @media #{$small-only} {
+	margin-bottom: 1rem;
+      }
+    }
+    .fa {
+      font-size: 6em;
+      @media #{$small-only} {
+	margin-left: 0.1em;
+	margin-bottom: 0.1em;
+      }
+    }
   }
 } // .reveal-modal
 // END MODALS

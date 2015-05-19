@@ -9862,13 +9862,40 @@ header {
 /* line 379, ../scss/app.scss */
 .reveal-modal {
   outline: 0 none;
+  min-height: 0;
+  text-align: justify;
 }
-/* line 382, ../scss/app.scss */
+/* line 384, ../scss/app.scss */
 .reveal-modal.fade {
   transform: translate(0px, -25%);
   transition: transform 0.3s ease-out 0s;
 }
-/* line 386, ../scss/app.scss */
+/* line 388, ../scss/app.scss */
 .reveal-modal.in {
   transform: translate(0px, 0px);
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 392, ../scss/app.scss */
+  .reveal-modal #modal_banner {
+    max-width: 40%;
+    margin-left: 1em;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 40em) {
+  /* line 398, ../scss/app.scss */
+  .reveal-modal #modal_banner img {
+    margin-bottom: 1rem;
+  }
+}
+/* line 403, ../scss/app.scss */
+.reveal-modal #modal_banner .fa {
+  font-size: 6em;
+}
+@media only screen and (max-width: 40em) {
+  /* line 403, ../scss/app.scss */
+  .reveal-modal #modal_banner .fa {
+    margin-left: 0.1em;
+    margin-bottom: 0.1em;
+  }
 }
