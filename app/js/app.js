@@ -22,7 +22,8 @@ conferenceApp.config(['$routeProvider',
 	controller: 'SponsorsCtrl'
       }).
       when('/register', {
-        templateUrl: 'partials/register.html'
+        templateUrl: 'partials/register.html',
+	controller: 'RegisterCtrl'
       }).
       otherwise({
         redirectTo: '/schedule'

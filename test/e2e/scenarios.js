@@ -50,4 +50,46 @@ describe('Conference App', function() {
     });
   });
   
+  describe('register view', function() {
+    function hasClass (selector, class_name) {
+      // returns true/false depending if selector has class name
+
+      // split classes for selector into a list
+      return $(selector).getAttribute('class').then(function(classes){
+	var classes = classes.split(' ');
+	if (classes.indexOf(class_name) > -1) return true;
+	return false;
+      });
+    }
+    
+    beforeEach(function() {
+      browser.get('app/index.html#/register');
+    });
+    
+    it('should produce an error if Name field is left empty', function() {
+      expect(hasClass('#name', 'ng-valid')).toBe(false);
+      expect(hasClass('#name', 'ng-invalid')).toBe(true);
+    });
+    
+    it('should produce success if any text is added to Name field', function() {
+      var nameField = element(by.css('#name'));
+      nameField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
+      expect(hasClass('#name', 'ng-valid')).toBe(true);
+      expect(hasClass('#name', 'ng-invalid')).toBe(false);
+    });
+    
+    it('should produce an error if email is invalid', function() {
+      var emailField = element(by.css('#email'));
+      emailField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
+      expect(hasClass('#email', 'ng-valid')).toBe(false);
+      expect(hasClass('#email', 'ng-invalid')).toBe(true);
+    });
+    
+    it('should produce success if email is valid', function() {
+      var emailField = element(by.css('#email'));
+      emailField.sendKeys('foo@example.com', protractor.Key.TAB); // tab blurs input and triggers validation
+      expect(hasClass('#email', 'ng-valid')).toBe(true);
+      expect(hasClass('#email', 'ng-invalid')).toBe(false);
+    });
+  });
 });

@@ -8,19 +8,34 @@
   </section><!-- intro -->
 </header>
 
-<form>
+<style type="text/css">
+  #registration-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+  #registration-form input.ng-valid.ng-touched {
+    background-color: #78FA89;
+  }
+</style>
+
+<form novalidate id="registration-form">
   <div class="row">
     <div class="large-4 small-12 columns">
       <label>Name</label>
-      <input type="text" placeholder="Your Name" />
+      <input id="name" type="text" placeholder="Your Name" ng-model="user.name" ng-model-options="{updateOn: 'blur'}" required="required" />
     </div>
     <div class="large-4 small-12 columns">
       <label>Phone Number</label>
-      <input type="text" placeholder="(xxx)&nbsp;xxx-xxxx" />
+      <input id="phone" type="tel" placeholder="(xxx)&nbsp;xxx-xxxx" ng-model-options="{updateOn: 'blur'}" required="required" />
     </div>
     <div class="large-4 small-12 columns">
       <label>Email</label>
-      <input type="text" placeholder="email@example.com" />
+      <input id="email" type="email" placeholder="email@example.com" ng-model="user.email" required="required" />
+      <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+    </div>
+    <div class="small-12 columns">
+      <input type="button" ng-click="reset()" value="Reset" />
+      <input type="submit" value="Submit" />
     </div>
   </div><!-- row -->
 </form>

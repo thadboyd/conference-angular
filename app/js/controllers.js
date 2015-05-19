@@ -178,6 +178,21 @@ conferenceControllers.controller('SponsorsCtrl', ['$scope', '$http',
     });
   }]);
 
+conferenceControllers.controller('RegisterCtrl', ['$scope',
+  function($scope) {
+    $scope.master = {};
+    
+    $scope.update = function(user) {
+      $scope.master = angular.copy(user);
+    };
+
+    $scope.reset = function() {
+      $scope.user = angular.copy($scope.master);
+    };
+
+    $scope.reset();
+  }]);
+
 conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal',
   function($scope, $http, $modal, $log) {
     $http.get('data/credits.json').success(function(data) {
