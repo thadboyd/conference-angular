@@ -66,30 +66,54 @@ describe('Conference App', function() {
       browser.get('app/index.html#/register');
     });
     
-    it('should produce an error if Name field is left empty', function() {
-      expect(hasClass('#name', 'ng-valid')).toBe(false);
-      expect(hasClass('#name', 'ng-invalid')).toBe(true);
-    });
+    describe('Name field', function() {
+      it('should produce an error if Name field is left empty', function() {
+	expect(hasClass('#name', 'ng-valid')).toBe(false);
+	expect(hasClass('#name', 'ng-invalid')).toBe(true);
+      });
+      
+      it('should produce success if any text is added to Name field', function() {
+	var nameField = element(by.css('#name'));
+	nameField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
+	expect(hasClass('#name', 'ng-valid')).toBe(true);
+	expect(hasClass('#name', 'ng-invalid')).toBe(false);
+      });
+    }); // Name field
     
-    it('should produce success if any text is added to Name field', function() {
-      var nameField = element(by.css('#name'));
-      nameField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
-      expect(hasClass('#name', 'ng-valid')).toBe(true);
-      expect(hasClass('#name', 'ng-invalid')).toBe(false);
-    });
+    describe('Phone field', function() {
+      var phoneField = element(by.css('#phone'));
+      it('should produce an error if phone number is invalid', function() {
+	phoneField.sendKeys('123', protractor.Key.TAB); // tab blurs input and triggers validation
+	expect(hasClass('#phone', 'ng-valid')).toBe(false);
+	expect(hasClass('#phone', 'ng-invalid')).toBe(true);
+      });
+      
+      it('should produce success if 10 or more digits are entered', function() {
+	phoneField.sendKeys('1234567890000', protractor.Key.TAB); // tab blurs input and triggers validation
+	expect(hasClass('#phone', 'ng-valid')).toBe(true);
+	expect(hasClass('#phone', 'ng-invalid')).toBe(false);
+      });
+      
+      it('should ignore invalid characters and apply mask (999) 999-9999', function() {
+	phoneField.sendKeys('foo(123)!@#456-bar78900000baz', protractor.Key.TAB); // tab blurs input and triggers validation
+	expect(element(by.css('#phone')).getAttribute('value')).toBe('(123) 456-7890');
+      });
+    }); // Phone field
     
-    it('should produce an error if email is invalid', function() {
+    describe('Email field', function() {
       var emailField = element(by.css('#email'));
-      emailField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
-      expect(hasClass('#email', 'ng-valid')).toBe(false);
-      expect(hasClass('#email', 'ng-invalid')).toBe(true);
-    });
-    
-    it('should produce success if email is valid', function() {
-      var emailField = element(by.css('#email'));
-      emailField.sendKeys('foo@example.com', protractor.Key.TAB); // tab blurs input and triggers validation
-      expect(hasClass('#email', 'ng-valid')).toBe(true);
-      expect(hasClass('#email', 'ng-invalid')).toBe(false);
-    });
+      
+      it('should produce an error if email is invalid', function() {
+	emailField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
+	expect(hasClass('#email', 'ng-valid')).toBe(false);
+	expect(hasClass('#email', 'ng-invalid')).toBe(true);
+      });
+      
+      it('should produce success if email is valid', function() {
+	emailField.sendKeys('foo@example.com', protractor.Key.TAB); // tab blurs input and triggers validation
+	expect(hasClass('#email', 'ng-valid')).toBe(true);
+	expect(hasClass('#email', 'ng-invalid')).toBe(false);
+      });
+    }); // Email field
   });
 });

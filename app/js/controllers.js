@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var conferenceControllers = angular.module('conferenceControllers', ['ngSanitize', 'mm.foundation']);
+var conferenceControllers = angular.module('conferenceControllers', ['ngSanitize', 'ui.mask', 'mm.foundation']);
 
 conferenceControllers.controller('TopBarCtrl', ['$scope', '$http', '$location', '$anchorScroll',
   function($scope, $http, $location, $anchorScroll) {

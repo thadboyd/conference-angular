@@ -16,7 +16,7 @@
     </div>
     <div class="large-4 small-12 columns">
       <label>Phone Number</label>
-      <input id="phone" type="tel" placeholder="(xxx)&nbsp;xxx-xxxx" ng-model-options="{updateOn: 'blur'}" required="required" />
+      <input id="phone" type="tel" placeholder="(xxx)&nbsp;xxx-xxxx" ng-model="user.phone" ng-model-options="{updateOn: 'blur'}" required="required" ui-mask="{{'(999) 999-9999'}}" />
     </div>
     <div class="large-4 small-12 columns">
       <label>Email</label>
