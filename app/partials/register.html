@@ -25,44 +25,46 @@
     </div>
   </div><!-- row -->
   <div class="row">
-    <div class="large-4 small-12 columns">
+    <div class="small-6 columns">
       <h3>Register for Days:</h3>
-      <h4>Price:</h4>
-      <table class="price">
-	<tr>
-	  <td>1 day:</td>
-	  <td>$100</td>
-	</tr><tr>
-	  <td>2 days:</td>
-	  <td>$175</td>
-	</tr><tr>
-	  <td>3 days:</td>
-	  <td>$225</td>
-	</tr>
-      </table>
-    </div>
-    <div class="large-8 small-12 columns">
       <fieldset>
 	<input type="checkbox" name="reg_day" value="03-31" ng-model="user.reg0331" /><label>March 31</label><br/>
 	<input type="checkbox" name="reg_day" value="04-01" ng-model="user.reg0401" /><label>April 1</label><br/>
 	<input type="checkbox" name="reg_day" value="04-02" ng-model="user.reg0402" /><label>April 2</label>
       </fieldset>
     </div>
-  </div><!-- row -->
-  <div class="row">
-    <div ng-show="totalPrice > 0" class="small-12 columns">
-      <table class="price">
-	<tr>
-	  <td>Ticket price:</td>
-	  <td>${{ticketPrice}}</td>
-	</tr><tr>
-	  <td>Tax:</td>
-	  <td>${{tax}}</td>
-	</tr><tr>
-	  <td>Total:</td>
-	  <td>${{calcPrice()}}</td>
-	</tr>
-      </table>
+    <div class="small-6 columns">
+      <div id="price-legend" ng-show="totalPrice == 0">
+	<h3>Pricing:</h3>
+	<table class="price">
+	  <tr>
+	    <td>1 day:</td>
+	    <td class="currency">$100</td>
+	  </tr><tr>
+	    <td>2 days:</td>
+	    <td class="currency">$175</td>
+	  </tr><tr>
+	    <td>3 days:</td>
+	    <td class="currency">$225</td>
+	  </tr>
+	</table>
+      </div><!-- price-legend -->
+      
+      <div id="price-calculated" ng-show="totalPrice > 0">
+	<h3>Your Cost:</h3>
+	<table class="price">
+	  <tr id="ticketPrice">
+	    <td>{{numDays}}-day registration:</td>
+	    <td class="currency">{{ticketPrice | currency}}</td>
+	  </tr><tr id="tax">
+	    <td>Sales tax:</td>
+	    <td class="currency">{{tax | currency}}</td>
+	  </tr><tr id="totalPrice">
+	    <td>Total:</td>
+	    <td class="currency">{{calcPrice() | currency}}</td>
+	  </tr>
+	</table>
+      </div><!-- price-calculated -->
     </div>
   </div><!-- row -->
   <div class="row">

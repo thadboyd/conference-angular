@@ -111,6 +111,10 @@ h1 {
   font-weight: $font-weight-bold;
   padding: 0.5rem 1em;
 } // .row h2
+
+table tr th, table tr td {
+  font-size: inherit;
+}
 // END GENERAL
 
 header {
@@ -363,14 +367,14 @@ header {
     }
   } // .category
   .viewmore {
-      display: block;
-      width: 100%;
-      
-      .fa-info-circle {
-	float: right;
-	font-size: 1.5em;
-      }
-    } // .viewmore
+    display: block;
+    width: 100%;
+    
+    .fa-info-circle {
+      float: right;
+      font-size: 1.5em;
+    }
+  } // .viewmore
 } // agenda-item
 
 
@@ -381,12 +385,39 @@ form {
 @include placeholder {
   color: $steel;
 }
-#registration-form input {
-  &.ng-invalid.ng-touched {
-    background-color: $alert-color;
+#registration-form {
+  label {
+    cursor: inherit;
   }
-  &.ng-valid.ng-touched {
-    background-color: $success-color;
+  input {
+    &.ng-invalid.ng-touched {
+      background-color: $alert-color;
+    }
+    &.ng-valid.ng-touched {
+      background-color: $success-color;
+    }
+  }
+  fieldset {
+    border: none;
+    margin: 0.7rem 0;
+    padding: 0;
+    
+    input, label {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+td.currency {
+  text-align: right;
+}
+#totalPrice {
+  font-weight: $font-weight-bold;
+  font-size: 125%;
+  
+  .currency {
+    border-top: solid 1px $black;
   }
 }
 

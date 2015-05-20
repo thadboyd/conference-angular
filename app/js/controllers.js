@@ -194,6 +194,7 @@ conferenceControllers.controller('RegisterCtrl', ['$scope',
       $scope.user.reg0401 = false;
       $scope.user.reg0402 = false;
       
+      $scope.numDays = 0;
       $scope.ticketPrice = 0;
       $scope.tax = 0;
       $scope.totalPrice = 0;
@@ -202,19 +203,19 @@ conferenceControllers.controller('RegisterCtrl', ['$scope',
     $scope.reset();
     
     $scope.calcPrice = function() {
-      var totalChecked = (+$scope.user.reg0331) + (+$scope.user.reg0401) + (+$scope.user.reg0402);      
+      $scope.numDays = (+$scope.user.reg0331) + (+$scope.user.reg0401) + (+$scope.user.reg0402);      
       
-      if(totalChecked == 1) {
+      if($scope.numDays == 1) {
 	$scope.ticketPrice = 100;
-      } else if(totalChecked == 2) {
+      } else if($scope.numDays == 2) {
 	$scope.ticketPrice = 175;
-      } else if(totalChecked == 3) {
+      } else if($scope.numDays == 3) {
 	$scope.ticketPrice = 225;
       } else {
 	$scope.ticketPrice = 0;
       }
       
-      $scope.tax = $scope.ticketPrice * 0.15;
+      $scope.tax = $scope.ticketPrice * 0.06;
       $scope.totalPrice = $scope.ticketPrice + $scope.tax;
       
       return $scope.totalPrice;
