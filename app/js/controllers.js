@@ -179,7 +179,7 @@ conferenceControllers.controller('SponsorsCtrl', ['$scope', '$http',
   }]);
 
 conferenceControllers.controller('RegisterCtrl', ['$scope',
-  function($scope) {
+  function($scope) {    
     $scope.master = {};
     
     $scope.update = function(user) {
@@ -188,9 +188,37 @@ conferenceControllers.controller('RegisterCtrl', ['$scope',
 
     $scope.reset = function() {
       $scope.user = angular.copy($scope.master);
+      
+      // Initialize registration to false instead of Undefined
+      $scope.user.reg0331 = false;
+      $scope.user.reg0401 = false;
+      $scope.user.reg0402 = false;
+      
+      $scope.ticketPrice = 0;
+      $scope.tax = 0;
+      $scope.totalPrice = 0;
     };
 
     $scope.reset();
+    
+    $scope.calcPrice = function() {
+      var totalChecked = (+$scope.user.reg0331) + (+$scope.user.reg0401) + (+$scope.user.reg0402);      
+      
+      if(totalChecked == 1) {
+	$scope.ticketPrice = 100;
+      } else if(totalChecked == 2) {
+	$scope.ticketPrice = 175;
+      } else if(totalChecked == 3) {
+	$scope.ticketPrice = 225;
+      } else {
+	$scope.ticketPrice = 0;
+      }
+      
+      $scope.tax = $scope.ticketPrice * 0.15;
+      $scope.totalPrice = $scope.ticketPrice + $scope.tax;
+      
+      return $scope.totalPrice;
+    }
   }]);
 
 conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal',

@@ -27,7 +27,19 @@
   <div class="row">
     <div class="large-4 small-12 columns">
       <h3>Register for Days:</h3>
-      <p>Registration is $100 per day.</p>
+      <h4>Price:</h4>
+      <table class="price">
+	<tr>
+	  <td>1 day:</td>
+	  <td>$100</td>
+	</tr><tr>
+	  <td>2 days:</td>
+	  <td>$175</td>
+	</tr><tr>
+	  <td>3 days:</td>
+	  <td>$225</td>
+	</tr>
+      </table>
     </div>
     <div class="large-8 small-12 columns">
       <fieldset>
@@ -38,13 +50,17 @@
     </div>
   </div><!-- row -->
   <div class="row">
-    <div ng-show="user.reg0331 || user.reg0401 || user.reg0402" class="small-12 columns">
-      <table class="costs">
+    <div ng-show="totalPrice > 0" class="small-12 columns">
+      <table class="price">
 	<tr>
-	  <td>Ticket cost:</td>
-	  <td>{{100 * (+user.reg0331) + 100 * (+user.reg0401) + 100 * (+user.reg0402)}}</td>
-	</tr>
-	<tr>
+	  <td>Ticket price:</td>
+	  <td>${{ticketPrice}}</td>
+	</tr><tr>
+	  <td>Tax:</td>
+	  <td>${{tax}}</td>
+	</tr><tr>
+	  <td>Total:</td>
+	  <td>${{calcPrice()}}</td>
 	</tr>
       </table>
     </div>
