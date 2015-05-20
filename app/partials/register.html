@@ -23,6 +23,33 @@
       <input id="email" type="email" placeholder="email@example.com" ng-model="user.email" required="required" />
       <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
     </div>
+  </div><!-- row -->
+  <div class="row">
+    <div class="large-4 small-12 columns">
+      <h3>Register for Days:</h3>
+      <p>Registration is $100 per day.</p>
+    </div>
+    <div class="large-8 small-12 columns">
+      <fieldset>
+	<input type="checkbox" name="reg_day" value="03-31" ng-model="user.reg0331" /><label>March 31</label><br/>
+	<input type="checkbox" name="reg_day" value="04-01" ng-model="user.reg0401" /><label>April 1</label><br/>
+	<input type="checkbox" name="reg_day" value="04-02" ng-model="user.reg0402" /><label>April 2</label>
+      </fieldset>
+    </div>
+  </div><!-- row -->
+  <div class="row">
+    <div ng-show="user.reg0331 || user.reg0401 || user.reg0402" class="small-12 columns">
+      <table class="costs">
+	<tr>
+	  <td>Ticket cost:</td>
+	  <td>{{100 * (+user.reg0331) + 100 * (+user.reg0401) + 100 * (+user.reg0402)}}</td>
+	</tr>
+	<tr>
+	</tr>
+      </table>
+    </div>
+  </div><!-- row -->
+  <div class="row">
     <div class="small-12 columns">
       <input type="button" ng-click="reset()" value="Reset" />
       <input type="submit" value="Submit" />
