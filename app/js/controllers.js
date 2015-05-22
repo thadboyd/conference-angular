@@ -220,6 +220,15 @@ conferenceControllers.controller('RegisterCtrl', ['$scope',
       
       return $scope.totalPrice;
     }
+    
+    $scope.submit = function(form) {
+      if(form.$valid && $scope.numDays > 0) {
+	$scope.submitted = true;
+      } else {
+	$scope.submitted = false;
+      }
+      return $scope.submitted;
+    }
   }]);
 
 conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal',

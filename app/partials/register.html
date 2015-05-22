@@ -8,7 +8,7 @@
   </section><!-- intro -->
 </header>
 
-<form novalidate id="registration-form" name="form">
+<form novalidate id="registration-form" name="form" ng-submit="submit(form)" ng-if="!submitted">
   <div class="row">
     <div class="large-4 small-12 columns">
       <label>Name</label>
@@ -85,3 +85,10 @@
     </div>
   </div><!-- row -->
 </form>
+<div class="row" ng-if="submitted">
+  <h3>Thank you</h3>
+  
+  <p>Thank you, your registration has been submitted.</p>
+  
+  <p>You will not receive an E-Mail confirmation.  Because the Submit button doesn't do anything except check whether your inputs are valid and then, if they are, show you this message.</p>
+</div>
