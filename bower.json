@@ -1,7 +1,7 @@
 {
   "name": "conference-angular",
   "description": "A Foundation-based demo site",
-  "version": "0.0.2",
+  "version": "2.0.0",
   "homepage": "http://thadde.us/demos/conference/",
   "license": "GPLv3",
   "private": true,

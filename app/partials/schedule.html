@@ -14,16 +14,15 @@
   <h2>Categories:</h2>
   <div class="icon-bar eight-up">
     <div ng-repeat="(name, icon) in categories" class="item">
-      <a class="inactive" data-category="{{name}}" href="javascript:void(0)"><span class="category fa {{icon}}"></span></a>
+      <a data-category="{{name}}" href="javascript:void(0)" ng-click="toggleFilter(name)" ng-class="filter == name ? 'active' : 'inactive'"><span class="category fa {{icon}}"></span></a>
     </div>
   </div><!-- icon-bar -->
 </section><!-- icons -->
 
 <section ng-repeat="day in days" id="{{day.id}}" class="row">
   <h2>{{day.header}}</h2>
-  
   <ul class="small-block-grid-2 large-block-grid-4">
-    <li ng-repeat="agenda_item in day.schedule" class="agenda-item {{agenda_item.category}}">
+    <li ng-repeat="agenda_item in day.schedule" class="agenda-item {{agenda_item.category}}" ng-show="filter == 'all' || filter == agenda_item.category">
       <div>
 	<img ng-if="events[agenda_item.event].image" src="{{events[agenda_item.event].image}}" alt="{{events[agenda_item.event].name}}" />
 	<div ng-if="!events[agenda_item.event].image">

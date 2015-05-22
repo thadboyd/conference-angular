@@ -250,7 +250,7 @@ header {
       background-color: $white;
       border: solid 1px $dksmoke;
       
-      &:hover {
+      &.active, &:hover {
 	background-color: $icon-bar-active-color;
       }
     } // a

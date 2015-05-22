@@ -23,6 +23,16 @@ conferenceControllers.controller('TopBarCtrl', ['$scope', '$http', '$location', 
 
 conferenceControllers.controller('ScheduleCtrl', ['$scope', '$http', '$modal',
   function($scope, $http, $modal) {
+    $scope.filter = 'all';
+    $scope.toggleFilter = function(newFilter) {
+      if($scope.filter == newFilter) {
+	$scope.filter = 'all';
+      } else {
+	$scope.filter = newFilter;
+      }
+      return $scope.filter;
+    };
+    
     // 'days' must be defined directly in controller;
     // parsing from JSON creates race condition
     // that causes anchorScroll to fail.
