@@ -91,4 +91,26 @@
   <p>Thank you, your registration has been submitted.</p>
   
   <p>You will not receive an E-Mail confirmation.  Because the Submit button doesn't do anything except check whether your inputs are valid and then, if they are, show you this message.</p>
+  
+  <p>However, you can review your <a href="javascript:void(0)" ng-click="open(user)">submitted data</a>.</p>
 </div>
+
+<script type="text/ng-template" id="modal_form">
+  <h2>Submitted Form Data</h2>
+  
+  <p>
+    <strong>Name:</strong> {{data.name}}<br/>
+    <strong>Phone:</strong> {{data.phone}}<br/>
+    <strong>Email:</strong> {{data.email}}
+  </p>
+  
+  <strong>Days Registered:</strong>
+  
+  <ul>
+    <li ng-if="data.reg0331">March 31</li>
+    <li ng-if="data.reg0401">April 1</li>
+    <li ng-if="data.reg0402">April 2</li>
+  </ul>
+  
+  <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+</script>

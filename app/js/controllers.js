@@ -178,8 +178,8 @@ conferenceControllers.controller('SponsorsCtrl', ['$scope', '$http',
     });
   }]);
 
-conferenceControllers.controller('RegisterCtrl', ['$scope',
-  function($scope) {    
+conferenceControllers.controller('RegisterCtrl', ['$scope', '$modal',
+  function($scope, $modal) {    
     $scope.master = {};
     
     $scope.update = function(user) {
@@ -229,6 +229,17 @@ conferenceControllers.controller('RegisterCtrl', ['$scope',
       }
       return $scope.submitted;
     }
+    
+    $scope.open = function(options) {
+      var modalInstance = $modal.open({
+	templateUrl: 'modal_form',
+	controller: 'ModalInstanceCtrl',
+	resolve: {
+	  data: function() {
+	    return options;
+	  }
+	}
+      })};
   }]);
 
 conferenceControllers.controller('CreditCtrl', ['$scope', '$http', '$modal',
