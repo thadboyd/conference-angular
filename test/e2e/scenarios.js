@@ -70,6 +70,7 @@ describe('Conference App', function() {
       it('should produce an error if Name field is left empty', function() {
 	expect(hasClass('#name', 'ng-valid')).toBe(false);
 	expect(hasClass('#name', 'ng-invalid')).toBe(true);
+	expect((element(by.css('#errorName'))).isDisplayed()).toBeTruthy;
       });
       
       it('should produce success if any text is added to Name field', function() {
@@ -77,6 +78,7 @@ describe('Conference App', function() {
 	nameField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
 	expect(hasClass('#name', 'ng-valid')).toBe(true);
 	expect(hasClass('#name', 'ng-invalid')).toBe(false);
+	expect((element(by.css('#errorName'))).isDisplayed()).toBeFalsy;
       });
     }); // Name field
     
@@ -86,12 +88,14 @@ describe('Conference App', function() {
 	phoneField.sendKeys('123', protractor.Key.TAB); // tab blurs input and triggers validation
 	expect(hasClass('#phone', 'ng-valid')).toBe(false);
 	expect(hasClass('#phone', 'ng-invalid')).toBe(true);
+	expect((element(by.css('#errorPhone'))).isDisplayed()).toBeTruthy;
       });
       
       it('should produce success if 10 or more digits are entered', function() {
 	phoneField.sendKeys('1234567890000', protractor.Key.TAB); // tab blurs input and triggers validation
 	expect(hasClass('#phone', 'ng-valid')).toBe(true);
 	expect(hasClass('#phone', 'ng-invalid')).toBe(false);
+	expect((element(by.css('#errorPhone'))).isDisplayed()).toBeFalsy;
       });
       
       it('should ignore invalid characters and apply mask (999) 999-9999', function() {
@@ -107,13 +111,57 @@ describe('Conference App', function() {
 	emailField.sendKeys('foo', protractor.Key.TAB); // tab blurs input and triggers validation
 	expect(hasClass('#email', 'ng-valid')).toBe(false);
 	expect(hasClass('#email', 'ng-invalid')).toBe(true);
+	expect((element(by.css('#errorEmail'))).isDisplayed()).toBeTruthy;
       });
       
       it('should produce success if email is valid', function() {
 	emailField.sendKeys('foo@example.com', protractor.Key.TAB); // tab blurs input and triggers validation
 	expect(hasClass('#email', 'ng-valid')).toBe(true);
 	expect(hasClass('#email', 'ng-invalid')).toBe(false);
+	expect((element(by.css('#errorEmail'))).isDisplayed()).toBeFalsy;
       });
     }); // Email field
+    
+    describe('Date checkbox group', function() {
+      it('should produce an error if no dates are checked and Submit is clicked', function() {
+	element(by.css('[type="submit"]')).click();
+	expect((element(by.css('#errorDays'))).isDisplayed()).toBeTruthy;
+      });
+      
+      it('should produce a total price of $185.50 if two dates are selected', function () {
+	element(by.css('[value="04-01"]')).click();
+	element(by.css('[value="04-02"]')).click();
+	expect(element(by.css('#totalPrice .currency')).getText()).toBe('$185.50');
+      });
+    }); // Date checkbox group
+    
+    describe('Success', function() {
+      beforeEach(function() {
+	var nameField = element(by.css('#name'));
+	var phoneField = element(by.css('#phone'));
+	var emailField = element(by.css('#email'));
+	var april1Checkbox = element(by.css('[value="04-01"]'));
+	var submitBtn = element(by.css('[type="submit"]')).click();
+	
+	nameField.sendKeys('foo');
+	phoneField.sendKeys('1234567890');
+	emailField.sendKeys('foo@example.com');
+	
+	april1Checkbox.click();
+	
+	submitBtn.click();
+      });
+      
+      it('should succeed if valid name, phone, and email are entered and a date is selected', function() {
+	expect((element(by.css('#thankyou'))).isDisplayed()).toBeTruthy;
+      });
+      
+      it('should produce a modal with accurate data', function() {
+	element(by.css('[ng-click="open(user)"]')).click();
+	expect(element(by.css('.reveal-modal h2')).getText()).toBe('SUBMITTED FORM DATA');
+	expect(element(by.css('#name')).getText()).toBe('foo');
+	expect((element(by.css('[ng-if="data.reg0401"]'))).isDisplayed()).toBeTruthy;
+      });
+    }); // Success
   });
 });

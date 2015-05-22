@@ -14,21 +14,21 @@
       <label>Name</label>
       <input id="name" name="name" type="text" placeholder="Your Name" ng-model="user.name" ng-model-options="{updateOn: 'blur'}" required="required" />
       <div ng-show="form.$submitted || form.name.$touched">
-	<span ng-show="form.name.$error.required" class="error">Please enter a name.</span>
+	<span ng-show="form.name.$error.required" class="error" id="errorName">Please enter a name.</span>
       </div>
     </div>
     <div class="large-4 small-12 columns">
       <label>Phone Number</label>
       <input id="phone" name="phone" type="tel" placeholder="(xxx)&nbsp;xxx-xxxx" ng-model="user.phone" ng-model-options="{updateOn: 'blur'}" required="required" ui-mask="{{'(999) 999-9999'}}" />
       <div ng-show="form.$submitted || form.phone.$touched">
-	<span ng-if="form.phone.$error.mask || form.phone.$error.required" class="error">Please enter a valid phone number.</span>
+	<span ng-show="form.phone.$error.mask || form.phone.$error.required" class="error" id="errorPhone">Please enter a valid phone number.</span>
       </div>
     </div>
     <div class="large-4 small-12 columns">
       <label>Email</label>
       <input id="email" name="email" type="email" placeholder="email@example.com" ng-model="user.email" required="required" />
       <div ng-show="form.$submitted || form.email.$touched">
-	<span ng-show="form.email.$error.email || form.email.$error.required" class="error">Please enter a valid email.</span>
+	<span ng-show="form.email.$error.email || form.email.$error.required" class="error" id="errorEmail">Please enter a valid email.</span>
       </div>
     </div>
   </div><!-- row -->
@@ -41,7 +41,7 @@
 	<input type="checkbox" name="reg_day" value="04-02" ng-model="user.reg0402" /><label>April 2</label>
       </fieldset>
       <div ng-show="form.$submitted">
-	<span ng-show="numDays == 0" class="error">Please select at least one date.</span>
+	<span ng-show="numDays == 0" class="error" id="errorDays">Please select at least one date.</span>
       </div>
     </div>
     <div class="small-6 columns">
@@ -85,7 +85,7 @@
     </div>
   </div><!-- row -->
 </form>
-<div class="row" ng-if="submitted">
+<div id="thankyou" class="row" ng-if="submitted">
   <h3>Thank you</h3>
   
   <p>Thank you, your registration has been submitted.</p>
@@ -99,9 +99,9 @@
   <h2>Submitted Form Data</h2>
   
   <p>
-    <strong>Name:</strong> {{data.name}}<br/>
-    <strong>Phone:</strong> {{data.phone}}<br/>
-    <strong>Email:</strong> {{data.email}}
+    <strong>Name:</strong> <span id="name">{{data.name}}</span><br/>
+    <strong>Phone:</strong> <span id="phone">{{data.phone}}</span><br/>
+    <strong>Email:</strong> <span id="email">{{data.email}}</span>
   </p>
   
   <strong>Days Registered:</strong>
